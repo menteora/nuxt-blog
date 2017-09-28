@@ -1,25 +1,16 @@
 <template>
-<!--<v-flex xs12 md4>
-  <div class="text-xs-center">
-    <v-avatar size="125px">
-      <img class="img-circle elevation-7 mb-1" src="https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/lists/1.jpg">
-    </v-avatar>
-    <h4>John <span style="font-weight:bold">Carter</span></h4>
-    <h5 class="text-xs-center">Lorem ipsum dolor sit amet</h5>
-  </div>
-</v-flex>-->
+
 <v-layout column justify-center align-center>
 
 <v-flex xs12 md5>
   <div class="text-xs-center">
-    <v-avatar size="125px">
-      <img class="img-circle elevation-7 mb-1" src="https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/lists/1.jpg">
+    <v-avatar size="150px">
+      <img class="img-circle elevation-7 mb-1" src="~/assets/dinamicamente.png">
     </v-avatar>
     <h4><b>Dinamicamente.org</b></h4>
     <h6 class="text-xs-center"><i>Geeky posts in shuffle mode</i></h6>
   </div>
 </v-flex>
-
 
 <v-flex xs12 md5>
   <div v-for="post in posts" :key="post.title">

@@ -22,20 +22,35 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
+
     <v-toolbar fixed>
       <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+
       <v-toolbar-title v-text="title"></v-toolbar-title>
+
       <v-spacer></v-spacer>
+
+      <v-toolbar-items class="hidden-sm-and-down"
+          v-for="(item, i) in items"
+          :key="i"
+          >
+        <v-btn :to="item.to" flat>
+          <v-icon left v-html="item.icon"></v-icon>{{item.title}}
+        </v-btn>
+      </v-toolbar-items>
+
     </v-toolbar>
+
     <main>
       <v-container fluid>
         <nuxt />
       </v-container>
     </main>
-    </v-navigation-drawer>
+
     <v-footer :fixed="fixed">
       <span>&copy; 2017</span>
     </v-footer>
+
   </v-app>
 </template>
 <script>
@@ -43,7 +58,7 @@
     data () {
       return {
         clipped: true,
-        drawer: true,
+        drawer: false,
         fixed: false,
         items: [
           {
@@ -73,7 +88,18 @@
           }
         ],
         miniVariant: false,
-        title: 'Dinamicamente.org'
+        title: 'Dinamicamente.org',
+        offsetTop: 0
+      }
+    },
+    methods: {
+      onScroll (e) {
+        this.offsetTop = window.pageYOffset || document.documentElement.scrollTop
+      }
+    },
+    watch: {
+      offsetTop: function (val) {
+        // TODO
       }
     }
   }
