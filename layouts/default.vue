@@ -26,6 +26,9 @@
     <v-toolbar fixed>
       <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
 
+      <v-avatar class="ml-3" size="32px" >
+        <img src="~/assets/icons/favicon.png">
+      </v-avatar>
       <v-toolbar-title v-text="title"></v-toolbar-title>
 
       <v-spacer></v-spacer>
@@ -60,32 +63,31 @@
         clipped: true,
         drawer: false,
         fixed: false,
-        items: [
-          {
-            title: 'Home',
-            icon: 'home',
-            to: '/'
-          },
-          {
-            title: 'Tags',
-            icon: 'label',
-            to: '/tags/'
-          },
-          {
-            title: 'Licenza',
-            icon: 'description',
-            to: '/info/licenza'
-          },
-          {
-            title: 'Policy',
-            icon: 'copyright',
-            to: '/info/cookie-policy'
-          },
-          {
-            title: 'Feed',
-            icon: 'rss_feed',
-            to: '/feed.xml'
-          }
+        items: [{
+          title: 'Home',
+          icon: 'home',
+          to: '/'
+        },
+        {
+          title: 'Tags',
+          icon: 'label',
+          to: '/tags/'
+        },
+        {
+          title: 'Licenza',
+          icon: 'description',
+          to: '/info/licenza'
+        },
+        {
+          title: 'Policy',
+          icon: 'copyright',
+          to: '/info/cookie-policy'
+        },
+        {
+          title: 'Feed',
+          icon: 'rss_feed',
+          to: '/feed.xml'
+        }
         ],
         miniVariant: false,
         title: 'Dinamicamente.org',
