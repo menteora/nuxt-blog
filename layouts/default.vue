@@ -1,11 +1,11 @@
 <template>
+
   <v-app light>
     <v-navigation-drawer
       persistent
       :mini-variant="miniVariant"
       :clipped="clipped"
       v-model="drawer"
-      enable-resize-watcher
     >
       <v-list>
         <v-list-tile
@@ -23,7 +23,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar fixed>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
     </v-toolbar>
@@ -42,13 +42,35 @@
   export default {
     data () {
       return {
-        clipped: false,
+        clipped: true,
         drawer: true,
         fixed: false,
         items: [
-          { to: '/', title: 'Welcome', icon: 'apps' },
-          { to: '/inspire', title: 'Inspire', icon: 'bubble_chart' },
-          { to: '/posts', title: 'Posts', icon: 'bubble_chart' }
+          {
+            title: 'Home',
+            icon: 'home',
+            to: '/'
+          },
+          {
+            title: 'Tags',
+            icon: 'label',
+            to: '/tags/'
+          },
+          {
+            title: 'Licenza',
+            icon: 'description',
+            to: '/info/licenza'
+          },
+          {
+            title: 'Policy',
+            icon: 'copyright',
+            to: '/info/cookie-policy'
+          },
+          {
+            title: 'Feed',
+            icon: 'rss_feed',
+            to: '/feed.xml'
+          }
         ],
         miniVariant: false,
         title: 'Dinamicamente.org'
