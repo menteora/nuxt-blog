@@ -1,6 +1,6 @@
 <template>
 
-  <v-app light>
+  <v-app light v-scroll="onScroll">
     <v-navigation-drawer
       persistent
       :mini-variant="miniVariant"
@@ -26,10 +26,10 @@
     <v-toolbar fixed>
       <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
 
-      <v-avatar class="ml-3" size="32px" >
-        <img src="~/assets/icons/favicon.png">
+      <v-avatar  :hidden="hiddenTitle" class="ml-3" size="32px" >
+        <img :hidden="hiddenTitle" src="~/assets/icons/favicon.png">
       </v-avatar>
-      <v-toolbar-title v-text="title"></v-toolbar-title>
+      <v-toolbar-title :hidden="hiddenTitle" v-text="title"></v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -63,6 +63,11 @@
         clipped: true,
         drawer: false,
         fixed: false,
+        miniVariant: false,
+        title: 'Dinamicamente.org',
+        offsetTop: 0,
+        offsetLimit: 250,
+        hiddenTitle: true,
         items: [{
           title: 'Home',
           icon: 'home',
@@ -88,10 +93,7 @@
           icon: 'rss_feed',
           to: '/feed.xml'
         }
-        ],
-        miniVariant: false,
-        title: 'Dinamicamente.org',
-        offsetTop: 0
+        ]
       }
     },
     methods: {
@@ -101,7 +103,11 @@
     },
     watch: {
       offsetTop: function (val) {
-        // TODO
+        if (this.offsetTop > this.offsetLimit) {
+          this.hiddenTitle = false
+        } else {
+          this.hiddenTitle = true
+        }
       }
     }
   }
