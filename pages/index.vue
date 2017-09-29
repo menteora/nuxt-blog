@@ -1,30 +1,56 @@
 <template>
-  <v-layout column justify-center align-center>
-    <v-flex xs12 sm8 md6>
-      <div class="text-xs-center">
-        <img src="/v.png" alt="Vuetify.js" class="mb-5" />
-      </div>
-      <v-card>
-        <v-card-title class="headline">Welcome to the Vuetify + Nuxt.js template</v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>For more information on Vuetify, check out the <a href="https://vuetifyjs.com" target="_blank">documentation</a>.</p>
-          <p>If you have questions, please join the official <a href="https://chat.vuetifyjs.com/" target="_blank" title="chat">discord</a>.</p>
-          <p>Find a bug? Report it on the github <a href="https://github.com/vuetifyjs/vuetify/issues" target="_blank" title="contribute">issue board</a>.</p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a href="https://nuxtjs.org/" target="_blank">Nuxt Documentation</a>
-          <br>
-          <a href="https://github.com/nuxt/nuxt.js" target="_blank">Nuxt GitHub</a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn primary flat nuxt to="/inspire">Continue</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
-  </v-layout>
+
+<v-layout column justify-center align-center>
+
+<v-flex xs12 md5>
+  <div class="text-xs-center">
+    <v-avatar size="150px">
+      <img class="img-circle elevation-7 mb-1" src="~/assets/dinamicamente.png">
+    </v-avatar>
+    <h4><b>Dinamicamente.org</b></h4>
+    <h6 class="text-xs-center"><i>Geeky posts in shuffle mode</i></h6>
+  </div>
+</v-flex>
+
+<v-flex xs12 md5>
+  <div v-for="post in posts" :key="post.title">
+    <v-card class="my-3" hover>
+      <v-card-media class="white--text" height="190px" :src="'/images/'+post.image.feature">
+        <v-container fill-height fluid>
+          <v-layout fill-height>
+            <v-flex xs12 align-end flexbox>
+              <span class="headline">{{ post.title }}</span>
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </v-card-media>
+      <v-card-text>
+        {{ post.description }}
+      </v-card-text>
+      <v-card-actions>
+        <v-btn icon class="red--text">
+          <v-icon medium>fa-reddit</v-icon>
+        </v-btn>
+        <v-btn icon class="light-blue--text">
+          <v-icon medium>fa-twitter</v-icon>
+        </v-btn>
+        <v-btn icon class="blue--text text--darken-4">
+          <v-icon medium>fa-facebook</v-icon>
+        </v-btn>
+        <v-spacer></v-spacer>
+        <v-btn :to="post.permalink" flat class="blue--text">Leggi</v-btn>
+      </v-card-actions>
+    </v-card>
+  </div>
+</v-flex>
+</v-layout>
 </template>
+
+
+<script>
+  export default {
+    asyncData: async ({ app, route, payload }) => ({
+      posts: await app.$content('/').get(route.path) || payload
+    })
+  }
+</script>

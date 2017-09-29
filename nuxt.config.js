@@ -18,6 +18,9 @@ module.exports = {
   css: [
     '~/assets/style/app.styl'
   ],
+  modules: [
+    'nuxtent'
+  ],
   /*
   ** Customize the progress-bar color
   */
