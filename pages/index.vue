@@ -15,15 +15,12 @@
 <v-flex xs12 md5>
   <div v-for="post in posts" :key="post.title">
     <v-card class="my-3" hover>
-      <v-card-media class="white--text" height="190px" :src="'/images/'+post.image.feature">
-        <v-container fill-height fluid>
-          <v-layout fill-height>
-            <v-flex xs12 align-end flexbox>
-              <span class="headline">{{ post.title }}</span>
-            </v-flex>
-          </v-layout>
-        </v-container>
+      <v-card-media class="white--text" height="190px" :src="'/images/'+post.image.feature" v-if="post.image.feature">
       </v-card-media>
+
+      <v-card-title primary-title>
+        <h3 class="headline mb-0">{{ post.title }}</h3>
+      </v-card-title>
       <v-card-text>
         {{ post.description }}
       </v-card-text>
