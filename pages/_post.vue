@@ -1,12 +1,15 @@
 <template>
+  <div>
+    <v-parallax class="hidden-sm-and-down" :src="'/images/'+post.image.feature" v-if="post.image.feature" >
+    </v-parallax>
   <v-layout column justify-center align-center>
-    <v-flex xs12 md7>
+    <v-flex id="absolute" xs12 md7>
       <v-card>
-        <v-card-media :src="'/images/'+post.image.feature" v-if="post.image.feature"  height="300px">
+        <v-card-media class="hidden-md-and-up" :src="'/images/'+post.image.feature" v-if="post.image.feature" height="200px">
         </v-card-media>
         <v-card-title primary-title>
           <div>
-            <h3 class="headline mb-0">{{ post.title }}</h3>
+            <h1 class="headline">{{ post.title }}</h1>
             <nuxtent-body :body="post.body" />
           </div>
         </v-card-title>
@@ -17,6 +20,7 @@
       </v-card>
     </v-flex>
   </v-layout>
+  </div>
 </template>
 <script>
 export default {
@@ -27,4 +31,10 @@ export default {
 </script>
 
 <style>
+@media screen and (min-width: 960px) {
+    #absolute {
+      position: absolute;
+      top: 300px;
+    }
+}
 </style>

@@ -26,7 +26,7 @@
     <v-toolbar fixed>
       <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
 
-      <v-avatar  :hidden="hiddenTitle" class="ml-3" size="32px" >
+      <v-avatar :hidden="hiddenTitle" class="ml-3" size="32px" >
         <img :hidden="hiddenTitle" src="~/assets/icons/favicon.png">
       </v-avatar>
       <v-toolbar-title :hidden="hiddenTitle" v-text="title"></v-toolbar-title>
@@ -49,10 +49,6 @@
         <nuxt />
       </v-container>
     </main>
-
-    <v-footer :fixed="fixed">
-      <span>&copy; 2017</span>
-    </v-footer>
 
   </v-app>
 </template>
@@ -103,6 +99,7 @@
     },
     watch: {
       offsetTop: function (val) {
+        // this.$nuxt.$router.match('/')
         if (this.offsetTop > this.offsetLimit) {
           this.hiddenTitle = false
         } else {
