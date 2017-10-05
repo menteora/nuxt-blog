@@ -19,7 +19,8 @@ module.exports = {
     '~/assets/style/app.styl'
   ],
   modules: [
-    'nuxtent'
+    'nuxtent',
+    ['@nuxtjs/google-analytics', { ua: 'UA-107595768-1' }]
   ],
   /*
   ** Customize the progress-bar color
