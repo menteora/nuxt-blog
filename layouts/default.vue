@@ -2,10 +2,12 @@
 
   <v-app light v-scroll="onScroll">
     <v-navigation-drawer
-      persistent
+      temporary
       :mini-variant="miniVariant"
       :clipped="clipped"
       v-model="drawer"
+      :disable-route-watcher="routeWatcher"
+      :enable-resize-watcher="resizeWatcher"
       app
     >
       <v-list>
@@ -13,6 +15,7 @@
           v-for="(item, i) in items"
           :key="i"
           :to="item.to"
+
         >
           <v-list-tile-action>
             <v-icon v-html="item.icon"></v-icon>
@@ -38,6 +41,7 @@
           v-for="(item, i) in items"
           :key="i"
           >
+
         <v-btn :to="item.to" flat>
           <v-icon left v-html="item.icon"></v-icon>{{item.title}}
         </v-btn>
@@ -63,6 +67,8 @@
         drawer: false,
         fixed: false,
         miniVariant: false,
+        routeWatcher: false,
+        resizeWatcher: true,
         title: 'Dinamicamente.org',
         offsetTop: 0,
         offsetLimit: 250,
