@@ -6,6 +6,7 @@
       :mini-variant="miniVariant"
       :clipped="clipped"
       v-model="drawer"
+      app
     >
       <v-list>
         <v-list-tile
@@ -23,7 +24,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-toolbar fixed>
+    <v-toolbar app clipped-left fixed>
       <v-toolbar-side-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-toolbar-side-icon>
 
       <v-avatar :hidden="hiddenTitle" class="ml-3" size="32px" >
@@ -45,9 +46,11 @@
     </v-toolbar>
 
     <main>
-      <v-container fluid>
-        <nuxt />
-      </v-container>
+      <v-content>
+        <v-container fluid>
+          <nuxt />
+        </v-container>
+      </v-content>
     </main>
 
   </v-app>

@@ -4,6 +4,6 @@ module.exports = {
     generate: [ // for static build
       'get', 'getAll'
     ],
-    isPost: false
+    isPost: true
   }
 }
