@@ -1,11 +1,21 @@
 <template>
 <div>
   <v-parallax id="myparallax" class="hidden-sm-and-down" :src="'/images/'+post.image.feature" v-if="post.image.feature">
+    <!--<v-layout column justify-center align-center mt-3>
+        <v-flex xs12 md5>
+          <div class="text-xs-center">
+            <v-avatar size="150px">
+              <img class="img-circle elevation-7" src="~/assets/dinamicamente.png">
+            </v-avatar>
+            <h4><b>Dinamicamente.org</b></h4>
+          </div>
+        </v-flex>
+    </v-layout>-->
   </v-parallax>
   <v-layout column justify-center align-center>
-    <v-flex id="absolute" xs12 md7>
+    <v-flex xs12 md7 id="absolute">
       <v-card>
-        <v-card-media class="hidden-md-and-up" :src="'/images/'+post.image.feature" v-if="post.image.feature" height="200px" >
+        <v-card-media class="hidden-md-and-up" :src="'/images/'+post.image.feature" v-if="post.image.feature" height="200px">
         </v-card-media>
         <v-card-title primary-title>
           <div>
@@ -147,8 +157,8 @@
     }
   }
 
-  #myparallax {
+  /*#myparallax {
     opacity: 0.7;
-    filter: alpha(opacity=70); /* For IE8 and earlier */
-}
+    filter: alpha(opacity=70);
+}*/
 </style>
