@@ -1,11 +1,11 @@
 <template>
 <div>
-  <v-parallax class="hidden-sm-and-down" :src="'/images/'+post.image.feature" v-if="post.image.feature">
+  <v-parallax id="myparallax" class="hidden-sm-and-down" :src="'/images/'+post.image.feature" v-if="post.image.feature">
   </v-parallax>
   <v-layout column justify-center align-center>
     <v-flex id="absolute" xs12 md7>
       <v-card>
-        <v-card-media class="hidden-md-and-up" :src="'/images/'+post.image.feature" v-if="post.image.feature" height="200px">
+        <v-card-media class="hidden-md-and-up" :src="'/images/'+post.image.feature" v-if="post.image.feature" height="200px" >
         </v-card-media>
         <v-card-title primary-title>
           <div>
@@ -139,7 +139,6 @@
 </script>
 
 <style>
-  @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
 
   @media screen and (min-width: 960px) {
     #absolute {
@@ -147,4 +146,9 @@
       top: 300px;
     }
   }
+
+  #myparallax {
+    opacity: 0.7;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+}
 </style>
