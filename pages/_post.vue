@@ -17,61 +17,92 @@
           <social-sharing :to="post.permalink" :title="post.title" :description="post.description" :hashtags="post.tags.toString()" twitter-user="dinamicamente" inline-template>
             <div>
               <network network="facebook">
-                <v-btn large flat class="blue--text">
-                  <!--<i class="fa fa-facebook"></i>
-                  <i class="fa fa-facebook-official" aria-hidden="true"></i>-->
-                  <v-icon large>fa-facebook-official</v-icon>
-                </v-btn>
+                <v-tooltip top>
+                  <v-btn large flat slot="activator" class="blue--text">
+                    <v-icon large>fa-facebook-official</v-icon>
+                  </v-btn>
+                  <span>Facebook</span>
+                </v-tooltip>
               </network>
               <network network="googleplus">
-                <v-btn large flat class="red--text">
-                  <v-icon large>fa-google-plus</v-icon>
-                </v-btn>
+                <v-tooltip top>
+                  <v-btn large flat slot="activator" class="red--text">
+                    <v-icon large>fa-google-plus</v-icon>
+                  </v-btn>
+                  <span>Google+</span>
+                </v-tooltip>
               </network>
               <network network="linkedin">
-                <v-btn large flat class="blue--text">
-                <v-icon large>fa-linkedin</v-icon>
-                </v-btn>
+                <v-tooltip top>
+                  <v-btn large flat slot="activator" class="blue--text">
+                    <v-icon large>fa-linkedin</v-icon>
+                  </v-btn>
+                  <span>Linkedin</span>
+                </v-tooltip>
               </network>
               <network network="telegram">
-                <v-btn large flat class="blue--text">
-                <v-icon large>fa-telegram</v-icon>
-                </v-btn>
+                <v-tooltip top>
+                  <v-btn large flat slot="activator" class="blue--text">
+                    <v-icon large>fa-telegram</v-icon>
+                  </v-btn>
+                  <span>Telegram</span>
+                </v-tooltip>
               </network>
               <network network="twitter">
-                <v-btn large flat class="blue--text">
-                <v-icon large>fa-twitter</v-icon>
-                </v-btn>
+                <v-tooltip top>
+                  <v-btn large flat slot="activator" class="blue--text">
+                    <v-icon large>fa-twitter</v-icon>
+                  </v-btn>
+                  <span>Twitter</span>
+                </v-tooltip>
               </network>
               <network network="whatsapp">
-                <v-btn large flat class="green--text">
-                <v-icon large>fa-whatsapp</v-icon>
-                </v-btn>
+                <v-tooltip top>
+                  <v-btn large flat slot="activator" class="green--text">
+                    <v-icon large>fa-whatsapp</v-icon>
+                  </v-btn>
+                  <span>Whatsapp</span>
+                </v-tooltip>
               </network>
               <network network="email">
-                <v-btn large flat>
-                <v-icon large>fa-envelope</v-icon>
-                </v-btn>
+                <v-tooltip top>
+                  <v-btn large flat slot="activator">
+                    <v-icon large>fa-envelope</v-icon>
+                  </v-btn>
+                  <span>E-mail</span>
+                </v-tooltip>
               </network>
               <network network="pinterest">
-                <v-btn large flat class="red--text">
-                <v-icon large>fa-pinterest</v-icon>
-                </v-btn>
+                <v-tooltip top>
+                  <v-btn large flat slot="activator" class="red--text">
+                    <v-icon large>fa-pinterest</v-icon>
+                  </v-btn>
+                  <span>Pinterest</span>
+                </v-tooltip>
               </network>
               <network network="reddit">
-                <v-btn large flat>
-                <v-icon large>fa-reddit</v-icon>
-                </v-btn>
+                <v-tooltip top>
+                  <v-btn large flat slot="activator">
+                    <v-icon large>fa-reddit</v-icon>
+                  </v-btn>
+                  <span>Reddit</span>
+                </v-tooltip>
               </network>
               <network network="skype">
-                <v-btn large flat class="blue--text">
-                <v-icon large>fa-skype</v-icon>
-                </v-btn>
+                <v-tooltip top>
+                  <v-btn large flat slot="activator" class="blue--text">
+                    <v-icon large>fa-skype</v-icon>
+                  </v-btn>
+                  <span>Skype</span>
+                </v-tooltip>
               </network>
               <network network="sms">
-                <v-btn large flat>
-                <v-icon large>fa-commenting-o</v-icon>
-                </v-btn>
+                <v-tooltip top>
+                  <v-btn large flat slot="activator">
+                    <v-icon large>fa-commenting-o</v-icon>
+                  </v-btn>
+                  <span>Sms</span>
+                </v-tooltip>
               </network>
               <!--<network network="vk">
                 <v-btn large flat>
