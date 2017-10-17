@@ -19,7 +19,7 @@
         </v-card-media>
         <v-card-title primary-title>
           <div>
-            <h1 class="headline">{{ post.title }}</h1>
+            <h1 class="display-1">{{ post.title }}</h1>
             <nuxtent-body :body="post.body" />
           </div>
         </v-card-title>
@@ -156,7 +156,17 @@
       top: 300px;
     }
   }
+h2 {
+  font-size: 24px!important;
+  font-weight: 400;
+  line-height: 32px!important;
+  letter-spacing: normal!important;
+}
 
+p {
+  font-size: 16px!important;
+  font-weight: 400;
+  }
   /*#myparallax {
     opacity: 0.7;
     filter: alpha(opacity=70);
