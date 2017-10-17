@@ -24,60 +24,60 @@
                 </v-btn>
               </network>
               <network network="googleplus">
-                <v-btn fab large flat class="red--text">
+                <v-btn large flat class="red--text">
                   <v-icon large>fa-google-plus</v-icon>
                 </v-btn>
               </network>
               <network network="linkedin">
-                <v-btn flat class="blue--text">
-                  <i class="fa fa-linkedin"></i>
+                <v-btn large flat class="blue--text">
+                <v-icon large>fa-linkedin</v-icon>
                 </v-btn>
               </network>
               <network network="telegram">
-                <v-btn flat class="blue--text">
-                  <i class="fa fa-telegram"></i>
+                <v-btn large flat class="blue--text">
+                <v-icon large>fa-telegram</v-icon>
                 </v-btn>
               </network>
               <network network="twitter">
-                <v-btn flat class="blue--text">
-                  <i class="fa fa-twitter"></i>
+                <v-btn large flat class="blue--text">
+                <v-icon large>fa-twitter</v-icon>
                 </v-btn>
               </network>
               <network network="whatsapp">
-                <v-btn flat class="green--text">
-                  <i class="fa fa-whatsapp"></i>
+                <v-btn large flat class="green--text">
+                <v-icon large>fa-whatsapp</v-icon>
                 </v-btn>
               </network>
               <network network="email">
-                <v-btn flat>
-                  <i class="fa fa-envelope"></i>
+                <v-btn large flat>
+                <v-icon large>fa-envelope</v-icon>
                 </v-btn>
               </network>
               <network network="pinterest">
-                <v-btn flat class="red--text">
-                  <i class="fa fa-pinterest"></i>
+                <v-btn large flat class="red--text">
+                <v-icon large>fa-pinterest</v-icon>
                 </v-btn>
               </network>
               <network network="reddit">
-                <v-btn flat>
-                  <i class="fa fa-reddit"></i>
+                <v-btn large flat>
+                <v-icon large>fa-reddit</v-icon>
                 </v-btn>
               </network>
               <network network="skype">
-                <v-btn flat class="blue--text">
-                  <i class="fa fa-skype"></i>
+                <v-btn large flat class="blue--text">
+                <v-icon large>fa-skype</v-icon>
                 </v-btn>
               </network>
               <network network="sms">
-                <v-btn flat>
-                  <i class="fa fa-commenting-o"></i>
+                <v-btn large flat>
+                <v-icon large>fa-commenting-o</v-icon>
                 </v-btn>
               </network>
-              <network network="vk">
-                <v-btn flat>
-                  <i class="fa fa-vk"></i>
+              <!--<network network="vk">
+                <v-btn large flat>
+                <v-icon large>fa-vk</v-icon>
                 </v-btn>
-              </network>
+              </network>-->
               <!--<network network="weibo">
                 <i class="fa fa-weibo"></i>Weibo
               </network>-->
