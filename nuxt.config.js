@@ -45,5 +45,8 @@ module.exports = {
         })
       }
     }
+  },
+  generate: {
+    routes: ['404']
   }
 }
