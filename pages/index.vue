@@ -1,7 +1,5 @@
 <template>
 
-
-
 <v-layout column justify-center align-center>
   <v-flex xs12 md5>
     <div class="text-xs-center">
