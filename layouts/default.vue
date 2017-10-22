@@ -41,10 +41,9 @@
           v-for="(item, i) in items"
           :key="i"
           >
-
-        <v-btn :to="item.to" flat>
-          <v-icon left v-html="item.icon"></v-icon>{{item.title}}
-        </v-btn>
+          <v-btn nuxt :to="item.to" flat>
+            <v-icon left v-html="item.icon"></v-icon>{{item.title}}
+          </v-btn>
       </v-toolbar-items>
 
     </v-toolbar>

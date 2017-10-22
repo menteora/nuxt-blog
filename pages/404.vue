@@ -13,9 +13,3 @@
 </v-flex>
 </v-layout>
 </template>
-<script>
-export default {
-  props: ['error'],
-  layout: 'default' // you can set a custom layout for the error page
-}
-</script>

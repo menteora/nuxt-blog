@@ -7,15 +7,16 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "node deploy"
   },
   "dependencies": {
     "@nuxtjs/axios": "^4.3.1",
     "@nuxtjs/google-analytics": "^1.0.0",
-    "nuxt": "^1.0.0-rc6",
-    "nuxtent": "^1.0.2",
+    "nuxt": "^1.0.0-rc11",
+    "nuxtent": "^1.1.0",
     "vue-social-sharing": "^2.2.10",
-    "vuetify": "^0.16"
+    "vuetify": "^0.16.9"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -28,6 +29,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1"
+    "stylus-loader": "^3.0.1",
+    "ftp-deploy": "^1.2.2"
   }
 }
