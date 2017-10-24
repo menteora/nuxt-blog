@@ -7,3 +7,11 @@ module.exports = {
     isPost: true
   }
 }
+/*
+,
+api: function (isStatic) {
+  return {
+    browserBaseURL: isStatic ? 'http://www.dinamicamente.org' : ''
+  }
+}
+*/

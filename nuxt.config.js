@@ -51,3 +51,16 @@ module.exports = {
     routes: ['404']
   }
 }
+
+/*
+,
+sitemap: {
+  hostname: 'http://www.dinamicamente.org',
+  generate: true,
+  routes: function () {
+    return axios.get('http://localhost:3000/content-api').then(res => {
+      return res.data.map(page => page.path)
+    })
+  }
+}
+*/
