@@ -1,6 +1,9 @@
-# nuxt-example
+> Dinamicamente.org migration form Jekyll
 
-> Nuxt.js + Vuetify.js project
+# Prerequisite
+
+[AVN](https://github.com/wbyoung/avn) - (optional) Automatic Version Switching for Node.js
+
 
 ## Build Setup
 
