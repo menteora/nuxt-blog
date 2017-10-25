@@ -4,8 +4,14 @@
 
 [AVN](https://github.com/wbyoung/avn) - (optional) Automatic Version Switching for Node.js
 
+# Awesome Modules
 
-## Build Setup
+- [Vuetify](https://github.com/vuetifyjs/vuetify) - Material Design ROCKS!
+- [Nuxt](https://github.com/nuxt/nuxt.js) - Generate static Site!
+- [Nuxtent](https://github.com/nuxt-community/nuxtent-module) - Convert md file to static html
+- [Ftp Deploy](https://github.com/simonh1000/ftp-deploy) - Deploy static site over FTP
+
+# Build Setup
 
 ``` bash
 # install dependencies
