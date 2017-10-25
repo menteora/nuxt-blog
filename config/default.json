@@ -1,0 +1,10 @@
+{
+  "deploy": {
+    "username": "",
+    "password": "",
+    "host": "ftp.",
+    "port": 21,
+    "localRoot": "/dist",
+    "remoteRoot": "/public_html/nuxt/"
+  }
+}
