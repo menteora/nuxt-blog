@@ -8,7 +8,7 @@
 
 - [Vuetify](https://github.com/vuetifyjs/vuetify) - Material Design ROCKS!
 - [Nuxt](https://github.com/nuxt/nuxt.js) - Generate static Site!
-- [Nuxtent](https://github.com/nuxt-community/nuxtent-module) - Convert md file to static html
+- [Nuxtent](https://github.com/nuxt-community/nuxtent-module) - Make md file accessible inside Nuxt pages
 - [Ftp Deploy](https://github.com/simonh1000/ftp-deploy) - Deploy static site over FTP
 
 # Build Setup
