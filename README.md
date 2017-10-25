@@ -1,5 +1,13 @@
 > Dinamicamente.org migration form Jekyll
 
+## Desktop preview
+
+![dinamicamente](static/images/dinamicamente-front.png)
+
+## Mobile preview
+
+![dinamicamente](static/images/dinamicamente-front-mobile.png)
+
 # Prerequisite
 
 [AVN](https://github.com/wbyoung/avn) - (optional) Automatic Version Switching for Node.js
