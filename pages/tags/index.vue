@@ -23,10 +23,9 @@
   export default {
     asyncData: async ({
       app,
-      route,
-      payload
+      route
     }) => ({
-      posts: await app.$content('/').getAll()
+      posts: await app.$content('/').query({ exclude: 'body' }).getAll()
     }),
     data: function () {
       return {
