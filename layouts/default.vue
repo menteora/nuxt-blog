@@ -12,10 +12,11 @@
     >
       <v-list>
         <v-list-tile
+          router
           v-for="(item, i) in items"
           :key="i"
           :to="item.to"
-
+          exact
         >
           <v-list-tile-action>
             <v-icon v-html="item.icon"></v-icon>
@@ -41,11 +42,10 @@
           v-for="(item, i) in items"
           :key="i"
           >
-          <v-btn nuxt :to="item.to" flat>
+          <v-btn exact router :to="item.to" flat>
             <v-icon left v-html="item.icon"></v-icon>{{item.title}}
           </v-btn>
       </v-toolbar-items>
-
     </v-toolbar>
 
     <main>
