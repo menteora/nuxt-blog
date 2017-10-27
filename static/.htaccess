@@ -1,8 +1,18 @@
-RewriteEngine on
-rewritecond %{http_host} ^nuxt.dinamicamente.org [nc]
-rewriterule ^(.*)$ http://www.nuxt.dinamicamente.org/$1 [r=301,nc]
+#RewriteEngine on
+#rewritecond %{http_host} ^nuxt.dinamicamente.org [nc]
+#rewriterule ^(.*)$ http://www.nuxt.dinamicamente.org/$1 [r=301,nc]
 
-RewriteRule ^([^\.]+[^/])$ $1/index.html [NC,L]
+#RewriteRule ^([^\.]+[^/])$ $1/index.html [NC,L]
 
-ErrorDocument 404 /404/index.html
-ErrorDocument 403 /404/index.html
+#ErrorDocument 404 /404/index.html
+#ErrorDocument 403 /404/index.html
+
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
