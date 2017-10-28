@@ -1,40 +1,14 @@
-#RewriteEngine on
-#rewritecond %{http_host} ^nuxt.dinamicamente.org [nc]
-#rewriterule ^(.*)$ http://www.nuxt.dinamicamente.org/$1 [r=301,nc]
-
-#RewriteRule ^([^\.]+[^/])$ $1/index.html [NC,L]
-
-#ErrorDocument 404 /404/index.html
-#ErrorDocument 403 /404/index.html
-
-<IfModule mod_headers.c>
-    # Serve gzip compressed CSS files if they exist
-    # and the client accepts gzip.
-    RewriteCond "%{HTTP:Accept-encoding}" "gzip"
-    RewriteCond "%{REQUEST_FILENAME}\.gz" -s
-    RewriteRule "^(.*)\.css" "$1\.css\.gz" [QSA]
-
-    # Serve gzip compressed JS files if they exist
-    # and the client accepts gzip.
-    RewriteCond "%{HTTP:Accept-encoding}" "gzip"
-    RewriteCond "%{REQUEST_FILENAME}\.gz" -s
-    RewriteRule "^(.*)\.js" "$1\.js\.gz" [QSA]
-
-
-    # Serve correct content types, and prevent mod_deflate double gzip.
-    RewriteRule "\.css\.gz$" "-" [T=text/css,E=no-gzip:1]
-    RewriteRule "\.js\.gz$" "-" [T=text/javascript,E=no-gzip:1]
-
-
-    <FilesMatch "(\.js\.gz|\.css\.gz)$">
-      # Serve correct encoding type.
-      Header append Content-Encoding gzip
-
-      # Force proxies to cache gzipped &
-      # non-gzipped css/js files separately.
-      Header append Vary Accept-Encoding
-    </FilesMatch>
+<IfModule mod_deflate.c>
+  <IfModule mod_headers.c>
+  Header append Vary User-Agent env=!dont-vary
+  </IfModule>
+  AddOutputFilterByType DEFLATE text/css text/x-component application/x-javascript application/javascript text/javascript text/x-js text/html text/richtext image/svg+xml text/plain text/xsd text/xsl text/xml image/x-icon application/json
+  <IfModule mod_mime.c>
+  # DEFLATE by extension
+  AddOutputFilter DEFLATE js css htm html xml
+  </IfModule>
 </IfModule>
+
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
