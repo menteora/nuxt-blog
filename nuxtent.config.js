@@ -6,10 +6,4 @@ module.exports = {
     ],
     isPost: true
   }
-  /*,
-  api: function (isStatic) {
-    return {
-      browserBaseURL: isStatic ? 'http://www.nuxt.dinamicamente.org' : ''
-    }
-  }*/
 }

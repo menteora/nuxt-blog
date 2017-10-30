@@ -1,16 +1,25 @@
+var appConfig = require('config').get('app')
+
 module.exports = {
   /*
   ** Headers of the page
+  for favicon: https://realfavicongenerator.net/
   */
   head: {
-    title: 'nuxt-example',
+    title: appConfig.get('title'),
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js + Vuetify.js project' }
+      { name: 'theme-color', content: '#ffffff' },
+      { hid: 'description', name: 'description', content: appConfig.get('metaContent') }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico?v=2' },
+      { rel: 'apple-touch-icon', sizes:'180x180', href:'/apple-touch-icon.png' },
+      { rel: 'icon', type: 'image/png', sizes:'32x32', href: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes:'16x16', href: '/favicon-16x16.png' },
+      { rel: 'manifest', href: '/manifest.json' },
+      { rel: 'mask-icon', color:"#000000", href: '/safari-pinned-tab.svg' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' },
       { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' }
     ]
@@ -21,7 +30,7 @@ module.exports = {
   ],
   modules: [
     'nuxtent',
-    ['@nuxtjs/google-analytics', { ua: 'UA-107595768-1' }]
+    ['@nuxtjs/google-analytics', { ua: appConfig.get('GoogleAnalyticsId') }]
   ],
   /*
   ** Customize the progress-bar color
@@ -48,16 +57,3 @@ module.exports = {
     }
   }
 }
-
-/*
-,
-sitemap: {
-  hostname: 'http://www.dinamicamente.org',
-  generate: true,
-  routes: function () {
-    return axios.get('http://localhost:3000/content-api').then(res => {
-      return res.data.map(page => page.path)
-    })
-  }
-}
-*/
