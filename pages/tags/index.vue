@@ -4,7 +4,7 @@
     <h2 class="headline">{{tag}}</h2>
     <v-container fluid grid-list-xl>
       <v-layout row wrap>
-        <v-flex xs12 md4 v-for="post in posts" v-if="post.tags.indexOf(tag) > -1" :key="post.title">
+        <v-flex xs12 md3 v-for="post in posts" v-if="post.tags.indexOf(tag) > -1" :key="post.title">
           <v-card class="my-3" hover>
             <v-card-media class="white--text" height="150px" :src="'/images/'+post.image.feature" v-if="post.image.feature">
             </v-card-media>
