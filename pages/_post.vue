@@ -142,7 +142,7 @@
       route,
       payload
     }) => ({
-      post: await app.$content('/').get(route.path) || payload
+      post: await app.$content('/posts').get(route.path) || payload
     })
   }
 </script>

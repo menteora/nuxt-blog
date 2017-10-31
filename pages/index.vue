@@ -45,7 +45,7 @@
     asyncData: async ({
       app
     }) => ({
-      posts: await app.$content('/').query({ exclude: 'body' }).getAll()
+      posts: await app.$content('/posts').query({ exclude: 'body' }).getAll()
     })
   }
 </script>
