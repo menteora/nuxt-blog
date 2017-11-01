@@ -1,25 +1,23 @@
 module.exports = {
   content: [
     [
-      'posts',
+      'news',
       {
-        page: '/_post',
+        page: '_post',
+        permalink: 'news/:slug',
         generate: [ // for static build
           'get', 'getAll'
         ],
         isPost: true
       }
-    ]
-    /*,
+    ],
     [
       'pages',
       {
-        page: '/projects/_slug',
-        permalink: '/projects/:slug',
+        page: '/_page',
         isPost: false,
         generate: ['get', 'getAll']
       }
     ]
-    */
   ]
 }

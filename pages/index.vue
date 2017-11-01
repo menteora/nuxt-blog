@@ -32,7 +32,7 @@
             <v-icon medium>fa-facebook</v-icon>
           </v-btn>
           <v-spacer></v-spacer>
-          <v-btn :to="post.permalink" flat class="blue--text">Leggi</v-btn>
+          <v-btn :to="post.path" flat class="blue--text">Leggi</v-btn>
         </v-card-actions>
       </v-card>
     </div>
@@ -45,7 +45,7 @@
     asyncData: async ({
       app
     }) => ({
-      posts: await app.$content('/posts').query({ exclude: 'body' }).getAll()
+      posts: await app.$content('/news').query({ exclude: 'body' }).getAll()
     })
   }
 </script>

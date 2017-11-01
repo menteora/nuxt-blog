@@ -85,12 +85,12 @@
         {
           title: 'Licenza',
           icon: 'description',
-          to: '/info/licenza'
+          to: '/license'
         },
         {
           title: 'Policy',
           icon: 'copyright',
-          to: '/info/cookie-policy'
+          to: '/policy'
         },
         {
           title: 'Feed',

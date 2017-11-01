@@ -5,7 +5,7 @@
     <v-container fluid grid-list-xl>
       <v-layout row wrap>
         <v-flex xs12 md3 v-for="post in posts" v-if="post.tags.indexOf(tag) > -1" :key="post.title">
-          <v-card class="my-3" hover>
+          <v-card class="my-3" hover :click="post.path">
             <v-card-media class="white--text" height="150px" :src="'/images/'+post.image.feature" v-if="post.image.feature">
             </v-card-media>
             <v-card-title>{{post.title}}</v-card-title>
@@ -25,7 +25,7 @@
       app,
       route
     }) => ({
-      posts: await app.$content('/posts').query({ exclude: 'body' }).getAll()
+      posts: await app.$content('/news').query({ exclude: 'body' }).getAll()
     }),
     data: function () {
       return {
