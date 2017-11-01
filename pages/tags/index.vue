@@ -1,5 +1,8 @@
 <template>
 <div>
+  <v-layout column justify-center align-center>
+    <nuxt-page-logo />
+  </v-layout>
   <div v-for="tag in tags" :key="tag">
     <h2 class="headline">{{tag}}</h2>
     <v-container fluid grid-list-xl>
@@ -18,9 +21,13 @@
 </template>
 
 <script>
+  import NuxtPageLogo from '~/components/PageLogo.vue'
   var _ = require('underscore')
 
   export default {
+    components: {
+      NuxtPageLogo
+    },
     asyncData: async ({
       app,
       route

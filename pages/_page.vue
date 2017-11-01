@@ -1,28 +1,39 @@
 <template>
-  <v-container fluid grid-list-md>
-    <v-layout row wrap>
-      <v-flex xs12 sm7 md8>
-        <v-card>
-          <v-card-text>
-            <h1 class="display-1">{{ page.title }}</h1>
-            <nuxtent-body :body="page.body" />
-          </v-card-text>
-        </v-card>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <v-layout column justify-center align-center>
+
+    <nuxt-page-logo />
+
+    <v-container fluid grid-list-md>
+      <v-layout row wrap>
+        <v-flex xs12 sm12 md12>
+          <v-card>
+            <v-card-text>
+              <h1 class="display-1">{{ page.title }}</h1>
+              <nuxtent-body :body="page.body" />
+            </v-card-text>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
+
+  </v-layout>
 </template>
 
 <script>
-  export default {
-    asyncData: async ({
-      app,
-      route,
-      payload
-    }) => ({
-      page: await app.$content('/pages').get(route.path) || payload
-    })
-  }
+import NuxtPageLogo from '~/components/PageLogo.vue'
+
+export default {
+  components: {
+    NuxtPageLogo
+  },
+  asyncData: async ({
+    app,
+    route,
+    payload
+  }) => ({
+    page: await app.$content('/pages').get(route.path) || payload
+  })
+}
 </script>
 
 <style>
