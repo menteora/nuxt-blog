@@ -6,7 +6,7 @@
   <v-flex xs12 md5>
     <div v-for="post in posts" :key="post.title">
 
-      <v-card class="my-3" hover>
+      <v-card class="my-3" hover v-on:click.capture="go(post.path)">
         <v-card-media class="white--text" height="250px" :src="'/images/'+post.image.feature" v-if="post.image.feature">
         </v-card-media>
         <v-card-title primary-title>
@@ -25,8 +25,6 @@
           <v-btn icon class="blue--text text--darken-4">
             <v-icon medium>fa-facebook</v-icon>
           </v-btn>
-          <v-spacer></v-spacer>
-          <v-btn :to="post.path" flat class="blue--text">Leggi</v-btn>
         </v-card-actions>
       </v-card>
 
@@ -47,6 +45,11 @@ export default {
     app
   }) => ({
     posts: await app.$content('/news').query({ exclude: 'body' }).getAll()
-  })
+  }),
+  methods: {
+    go: function (url) {
+      this.$nuxt.$router.push(url)
+    }
+  }
 }
 </script>

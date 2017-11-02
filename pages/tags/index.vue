@@ -8,7 +8,7 @@
     <v-container fluid grid-list-xl>
       <v-layout row wrap>
         <v-flex xs12 md3 v-for="post in posts" v-if="post.tags.indexOf(tag) > -1" :key="post.title">
-          <v-card class="my-3" hover :click="post.path">
+          <v-card class="my-3" hover v-on:click.capture="go(post.path)">
             <v-card-media class="white--text" height="150px" :src="'/images/'+post.image.feature" v-if="post.image.feature">
             </v-card-media>
             <v-card-title>{{post.title}}</v-card-title>
@@ -48,7 +48,11 @@
       }
       this.tags = _.uniq(t)
     },
-    methods: {},
+    methods: {
+      go: function (url) {
+        this.$nuxt.$router.push(url)
+      }
+    },
     filters: {}
   }
 </script>
