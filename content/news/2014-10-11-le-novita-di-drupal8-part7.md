@@ -18,7 +18,7 @@ image:
 
 Drupal 8 sta per uscire e porta con se un gran numero di migliorie sotto tutti gli aspetti. Che tu sia un Site Builder, uno sviluppatore di moduli o di temi oppure un semplice utilizzatore, Drupal 8 ha una valanga di novità per te.
 
-Con [l'articolo precedente]({% post_url 2014-09-29-le-novita-di-drupal8-part6 %}) abbiamo iniziato ad illustrare le novità in ambito coding.
+Con [l'articolo precedente](/news/le-novita-di-drupal8-part6) abbiamo iniziato ad illustrare le novità in ambito coding.
 
 Oggi proseguiremo in quest'ambito illustrando ulteriori cambiamenti importanti per gli sviluppatori Drupal. **ATTENZIONE: E' sconsigliata la lettura di questo articolo agli sviluppatori nostalgici!** :)
 
@@ -30,9 +30,7 @@ In Drupal 7 per definire elementi da collegare al resto del sistema (ad esempio 
 
 **block.module**
 
-{% highlight php %}
-{% raw %}
-
+```php
 <?php
 /**
  * Implements hook_block_info().
@@ -62,11 +60,9 @@ function example_block_view($delta = '') {
   return $block;
 }
 ?>
+```
 
-{% endraw %}
-{% endhighlight %}
-
-In questo caso oltre alle [già menzionate ArrayPI]({% post_url 2014-09-29-le-novita-di-drupal8-part6 %}) troviamo anche definizioni di hook che fanno parte di un'API sconosciuta a meno che non si studi uno per uno i file [`.api.php`](https://api.drupal.org/api/drupal/modules!block!block.api.php/7) dei singoli moduli (sempre ammesso che ci siano). Solo così è possibile capire quale hook bisogna implementare per ottenere questo o quel comportamento specifico. Inoltre alcuni sono da definire obbligatoriamente e altri no... Una documentazione dettagliata è indispensabile in questi casi.
+In questo caso oltre alle [già menzionate ArrayPI](/news/le-novita-di-drupal8-part6) troviamo anche definizioni di hook che fanno parte di un'API sconosciuta a meno che non si studi uno per uno i file [`.api.php`](https://api.drupal.org/api/drupal/modules!block!block.api.php/7) dei singoli moduli (sempre ammesso che ci siano). Solo così è possibile capire quale hook bisogna implementare per ottenere questo o quel comportamento specifico. Inoltre alcuni sono da definire obbligatoriamente e altri no... Una documentazione dettagliata è indispensabile in questi casi.
 
 In Drupal 8 è stato introdotto un [sistema di Plugin](https://drupal.org/developing/api/8/plugins) che trasforma l'esempio precedente in questo:
 
@@ -74,9 +70,7 @@ In Drupal 8 è stato introdotto un [sistema di Plugin](https://drupal.org/develo
 
 **src/Plugin/Block/Example.php**
 
-{% highlight php %}
-{% raw %}
-
+```php
 <?php
 namespace Drupal\example\Plugin\Block;
 
@@ -98,11 +92,9 @@ class Example extends BlockBase {
   }
 }
 ?>
+```
 
-{% endraw %}
-{% endhighlight %}
-
-Il codice sopra è molto simile all'esempio relativo alla classe Controller illustrato nell'[articolo precedente]({% post_url 2014-09-29-le-novita-di-drupal8-part6 %}). Un plugin è una classe che ne estende un altra di base ([BlockBase](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Block%21BlockBase.php/class/BlockBase/8)) la quale si occupa già autonomamente di alcune cose per noi. La Block API stessa risiede nella [BlockPluginInterface](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Block%21BlockPluginInterface.php/interface/BlockPluginInterface/8) che la classe `BlockBase` implementa.
+Il codice sopra è molto simile all'esempio relativo alla classe Controller illustrato nell'[articolo precedente](/news/le-novita-di-drupal8-part6). Un plugin è una classe che ne estende un altra di base ([BlockBase](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Block%21BlockBase.php/class/BlockBase/8)) la quale si occupa già autonomamente di alcune cose per noi. La Block API stessa risiede nella [BlockPluginInterface](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Block%21BlockPluginInterface.php/interface/BlockPluginInterface/8) che la classe `BlockBase` implementa.
 
 Uno dei vantaggi dell'utilizzo delle interfacce è che espongono e allo stesso tempo documentano le varie API che contengono, oltre a essere rilevabili dal sistema e dagli IDE che utilizziamo. Un ottimo modo per imparare le nuove API di Drupal 8 è appunto studiare le varie interfacce.
 
@@ -114,24 +106,18 @@ In Drupal 7 e precedenti il meccanismo per estendere il sistema si basa sul conc
 
 ### Drupal 7: Hooks
 
-{% highlight php %}
-{% raw %}
-
+```php
 <?php
   // Compile a list of permissions from all modules for display on admin form.
   foreach (module_implements('permission') as $module) {
     $modules[$module] = $module_info[$module]['name'];
   }
 ?>
-
-{% endraw %}
-{% endhighlight %}
+```
 
 Se un modulo volesse rispondere a questo evento, dovrebbe creare una funzione chiamata `modulo_nomehook` e provvedere un output compatibile con ciò che l'hook implementato si aspetta. Ecco un esempio:
 
-{% highlight php %}
-{% raw %}
-
+```php
 <?php
 /**
  * Implements hook_permission().
@@ -144,9 +130,7 @@ function menu_permission() {
   );
 }
 ?>
-
-{% endraw %}
-{% endhighlight %}
+```
 
 Questo meccanismo di hook è rimasto invariato nel corso del tempo (Drupal è nato nel 2001, quando la versione corrente di PHP era la 3 e non esisteva nessun supporto al codice object oriented) e oggi il peso degli anni comincia a farsi sentire:
 
@@ -158,9 +142,7 @@ Nonostante in Drupal 8 gli hook siano ancora presenti per molti comportamenti ba
 
 A dimostrazione di questo diamo un occhiata alla configuration API di Drupal 8, che risiede nel file [core/lib/Drupal/Core/Config/Config.php](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Config%21Config.php/class/Config/8). In essa sono definiti vari metodi per le operazioni "CRUD" come `save()`, `delete()` ecc. Ognuno di essi, finito il proprio lavoro, scatena un evento al quale possono reagire gli altri moduli. Prendiamo ad esempio il metodo `Config::save()`:
 
-{% highlight php %}
-{% raw %}
-
+```php
 <?php
   public function save() {
     // <snip>Validate the incoming information.</snip>
@@ -171,30 +153,22 @@ A dimostrazione di questo diamo un occhiata alla configuration API di Drupal 8, 
     $this->eventDispatcher->dispatch(ConfigEvents::SAVE, new ConfigCrudEvent($this));
   }
 ?>
-
-{% endraw %}
-{% endhighlight %}
+```
 
 Prendiamo il caso in cui il parametro di configurazione modificato sia la lingua di default del sito. In questo caso il modulo Language deve cancellare i file PHP compilati per rendere effettive le modifiche. Per ottenere questo il modulo Language deve fare tre cose:
 
 * Sottoscrivere una classe all'evento registrandola nel proprio file language.services.yml (questo tipo di file di configurazione serve al [Service Container](http://symfony.com/doc/current/book/service_container.html) di Symfony per registrare codice riutilizzabile):
 
-{% highlight php %}
-{% raw %}
-
+```php
 language.config_subscriber:
     class: Drupal\language\EventSubscriber\ConfigSubscriber
     tags:
       - { name: event_subscriber }
-
-{% endraw %}
-{% endhighlight %}
+```
 
 * Nella [classe indicata](https://api.drupal.org/api/drupal/core%21modules%21language%21src%21EventSubscriber%21ConfigSubscriber.php/class/ConfigSubscriber/8) bisogna implementare l'interfaccia [EventSubscriberInterface](http://api.symfony.com/2.4/Symfony/Component/EventDispatcher/EventSubscriberInterface.html) e dichiarare il metodo `getSubscribedEvents()`, che stabilisce a quali eventi bisogna reagire e indica una o più callback che devono essere eseguite al verificarsi dell'evento. Oltre a questo viene indicato un "peso" (o priorità) che permette a certi moduli di eseguire le proprie callback secondo un ordine specifico (**Attenzione:** il modo in cui vengono valutati i pesi in Symfony è opposto a quello di Drupal! Pesi maggiori hanno la precedenza su quelli minori):
 
-{% highlight php %}
-{% raw %}
-
+```php
 <?php
 class ConfigSubscriber implements EventSubscriberInterface {
   static function getSubscribedEvents() {
@@ -203,15 +177,11 @@ class ConfigSubscriber implements EventSubscriberInterface {
   }
 }
 ?>
-
-{% endraw %}
-{% endhighlight %}
+```
 
 * Definire la callback contenente il codice da eseguire una volta salvata la configurazione:
 
-{% highlight php %}
-{% raw %}
-
+```php
 <?php
   public function onConfigSave(ConfigCrudEvent $event) {
     $saved_config = $event->getConfig();
@@ -222,9 +192,7 @@ class ConfigSubscriber implements EventSubscriberInterface {
     }
   }
 ?>
-
-{% endraw %}
-{% endhighlight %}
+```
 
 In questo modo un singolo modulo può sottoscrivere più classi a specifici eventi. Questo permette di evitare l'utilizzo di costrutti switch/case all'interno della definizione di hook, oppure di ritrovarsi pezzi di codice non correlati tra loro in un singolo blocco di codice. Il nuovo sistema invece ci costringe a sviluppare l'abilità nel separare la logica in classi distinte. Questo significa anche che il nostro codice verrà caricato solo quando necessario (lazy loading), senza occupare memoria inutilmente.
 

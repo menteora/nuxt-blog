@@ -167,6 +167,11 @@
     font-size: 16px!important;
     font-weight: 400;
   }
+  
+  li {
+    font-size: 16px!important;
+    font-weight: 400;
+  }  
   /*#myparallax {
     opacity: 0.7;
     filter: alpha(opacity=70);
