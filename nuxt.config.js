@@ -25,9 +25,7 @@ module.exports = {
     ]
   },
   plugins: ['~/plugins/vuetify.js', '~/plugins/vue-social-sharing.js'],
-  css: [
-    '~/assets/style/app.styl'
-  ],
+  css: ['~/assets/style/app.styl', 'prismjs/themes/prism-coy.css'],
   modules: [
     'nuxtent',
     ['@nuxtjs/google-analytics', { ua: appConfig.get('GoogleAnalyticsId') }]

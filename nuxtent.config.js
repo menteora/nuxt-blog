@@ -1,4 +1,15 @@
+var Prism = require('prismjs');
+require('prismjs/components/prism-php');
+require('prismjs/components/prism-yaml');
+
 module.exports = {
+  parsers: {
+    md: {
+      highlight: (code, lang) => {
+        return `<pre class="language-${lang}"><code class="language-${lang}">${Prism.highlight(code, Prism.languages[lang] || Prism.languages.markup)}</code></pre>`
+      }
+    }
+  },
   content: [
     [
       'news',
@@ -8,7 +19,7 @@ module.exports = {
         generate: [ // for static build
           'get', 'getAll'
         ],
-        isPost: true
+        isPost: false
       }
     ],
     [

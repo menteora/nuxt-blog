@@ -159,7 +159,7 @@ Prendiamo il caso in cui il parametro di configurazione modificato sia la lingua
 
 * Sottoscrivere una classe all'evento registrandola nel proprio file language.services.yml (questo tipo di file di configurazione serve al [Service Container](http://symfony.com/doc/current/book/service_container.html) di Symfony per registrare codice riutilizzabile):
 
-```php
+```yaml
 language.config_subscriber:
     class: Drupal\language\EventSubscriber\ConfigSubscriber
     tags:
