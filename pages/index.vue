@@ -15,17 +15,6 @@
         <v-card-text class="subheading">
           {{ post.description }}
         </v-card-text>
-        <v-card-actions>
-          <v-btn icon class="red--text">
-            <v-icon medium>fa-reddit</v-icon>
-          </v-btn>
-          <v-btn icon class="light-blue--text">
-            <v-icon medium>fa-twitter</v-icon>
-          </v-btn>
-          <v-btn icon class="blue--text text--darken-4">
-            <v-icon medium>fa-facebook</v-icon>
-          </v-btn>
-        </v-card-actions>
       </v-card>
 
     </div>
