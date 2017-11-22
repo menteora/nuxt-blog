@@ -18,7 +18,7 @@ image:
 
 Drupal 8 sta per uscire e porta con se un gran numero di migliorie sotto tutti gli aspetti. Che tu sia un Site Builder, uno sviluppatore di moduli o di temi oppure un semplice utilizzatore, Drupal 8 ha una valanga di novità per te.
 
-Con [l'articolo precedente]({% post_url 2014-06-22-le-novita-di-drupal8-part3 %}) abbiamo illustrato le novità relativamente al multilingua.
+Con [l'articolo precedente](/news/le-novita-di-drupal8-part3) abbiamo illustrato le novità relativamente al multilingua.
 
 Oggi invece ci concentreremo sulle novità della parte Frontend di Drupal 8.
 
@@ -42,13 +42,11 @@ Drupal 8 fa largo uso degli [attributi WAI-ARIA](http://www.w3.org/WAI/intro/ari
 
 Twig ha preso il posto del sistema di theming di default presente in Drupal 7 basato su PHPTemplate. Twig permette ai designer che non sono esperti di PHP, di modificare il markup senza sforzi eccessivi.
 
-Ad esempio invece di imparare la differenza tra array multidimensionali e oggetti e quando usare uno o l'altro basta utilizzare la sintassi `{% raw %}{{ foo.bar }}{% endraw %}`. Semplici condizioni e loop possono essere inseriti all'interno dei tag `{% raw %}{% ... %}{% endraw %}`.
+Ad esempio invece di imparare la differenza tra array multidimensionali e oggetti e quando usare uno o l'altro basta utilizzare la sintassi `{{ foo.bar }}`. Semplici condizioni e loop possono essere inseriti all'interno dei tag `{% ... %}`.
 
 Di seguito riporto un estratto dal page.html.twig (l'equivalente del page.tpl.php in Drupal 7) che mostra alcune caratteristiche di twig, dei nuovi tag html5 e il supporto nativo ARIA:
 
-{% highlight php %}
-{% raw %}
-    
+```php
 <?php
 <main role="main">
   <a id="main-content"></a>{# link is in html.html.twig #}
@@ -87,9 +85,7 @@ Di seguito riporto un estratto dal page.html.twig (l'equivalente del page.tpl.ph
   
 </main>
 ?>
-  
-{% endraw %}
-{% endhighlight %}
+```
 
 Per rendere disponibili le variabili all'interno del template bisogna utilizzare le funzioni `THEME_preprocess_HOOK()` come hai sempre fatto fino ad ora con l'unica differenza che adesso andranno scritte all'interno di un file chiamato `THEME.theme` invece del `template.php`.
 
@@ -97,9 +93,7 @@ Twig costringe gli sviluppatori a separare la parte di presentazione da quella d
 
 Un'altra nota positiva è la possibilità di attivare la modalità debug aggiungendo la riga `$settings['twig_debug'] = TRUE;` nel nostro file `settings.php`. In questo modo verranno visualizzati degli utili commenti nel markup generato da drupal che indicano dove possiamo trovare il template relativo al codice che vogliamo modificare e quali "theme suggestion" è stata utilizzata per produrre il markup. Ad esempio:
 
-{% highlight php %}
-{% raw %}
-
+```php
 <?php
 <div class="content">
 
@@ -122,9 +116,7 @@ Un'altra nota positiva è la possibilità di attivare la modalità debug aggiung
 
 </div>
 ?>
-
-{% endraw %}
-{% endhighlight %}
+```
 
 ## Veloce fin da subito!
 
@@ -134,17 +126,13 @@ Ma questo significa che dobbiamo diventare scemi per disattivare tutte queste fu
 
 No! Drupal 8 ha un file `sites/example.settings.local.php` proprio per questo scopo. Questo file disattiva le impostazioni per le performance per l'utilizzo in ambiente di sviluppo. Per utilizzarlo basta semplicemente copiarlo e rinominarlo `sites/default/settings.local.php` e decommentare le seguenti righe nel file `settings.php`:
 
-{% highlight php %}
-{% raw %}
-
+```php
 <?php
 # if (file_exists(__DIR__ . '/settings.local.php')) {
 #   include __DIR__ . '/settings.local.php';
 # }
 ?>
-
-{% endraw %}
-{% endhighlight %}
+```
 
 All'interno del file `settings.local.php` ci sono anche delle impostazioni relative a twig che rendono il theming più semplice. Ad esempio l'attivazione del debug o la disattivazione della cache in modo da vedere immediatamente eventuali modifiche apportate ai template.
 
@@ -154,7 +142,7 @@ Drupal 8 consente anche un esperienza utente più veloce in quanto è stato fatt
 
 Sono stati introdotti diversi elementi UI che in Drupal 7 facevano parte del modulo [Chaos tool suite (ctools)](http://drupal.org/project/ctools), come le finestre modali e i drop buttons. E' stato introdotto anche il concetto di "button types" che consente di assegnare uno stile differente ai pulsanti in base alla funzione che hanno. Ad esempio il tipo "primary" è la visualizzazione di default (di colore blu nel tema Seven) mentre il tipo "danger" viene visualizzato come un link di colore rosso, questo aiuta l'utente nella scelta dell'azione da eseguire.
 
-![Drupal8 Button Types]({{ site.url }}/images/d8-buttons.png)
+![Drupal8 Button Types](/images/d8-buttons.png)
 
 ## Responsive Theming
 
@@ -168,9 +156,7 @@ Dite addio alle funzioni `drupal_add_css` e `drupal_add_js`! Da adesso basta uti
 
 **seven.theme**
 
-{% highlight php %}
-{% raw %}
-
+```php
 function seven_form_node_form_alter(&$form, &$form_state) {
 ...
   $form['#attached'] = array(
@@ -178,17 +164,13 @@ function seven_form_node_form_alter(&$form, &$form_state) {
   );
 ...
 }
-
-{% endraw %}
-{% endhighlight %}
+```
 
 Quanto sopra va bene per l'aggiunta spot di determinati asset che non hanno dipendenze. L'approccio raccomandato invece è quello di registrare uno o più JS/CSS, e le loro dipendenze, come librerie nel file `MODULE/THEME_libraries.yml` e quindi aggiungere il riferimento a queste librerie nella proprietà `#attached`. Ad esempio:
 
 **seven.libraries.yml**
 
-{% highlight php %}
-{% raw %}
-
+```yaml
 maintenance-page:
   version: VERSION
   js:
@@ -219,15 +201,11 @@ drupal.nav-tabs:
     - core/drupal
     - core/jquery.once
     - core/jquery.intrinsic
-
-{% endraw %}
-{% endhighlight %}
+```
 
 **seven.theme**
 
-{% highlight php %}
-{% raw %}
-
+```php
 <?php
 function seven_preprocess_install_page(&$variables) {
   // ...
@@ -242,9 +220,7 @@ function seven_preprocess_install_page(&$variables) {
   drupal_render($libraries);
 }
 ?>
-
-{% endraw %}
-{% endhighlight %}
+```
 
 Sebbene questo approccio non è immediato come chiamare una semplice funzione `drupal_add_QUALCOSA()`, ci da però la possibilità di cachare questi asset per migliorare le performance, e sono facilmente riutilizzabili all'interno dello stesso codice.
 
@@ -256,6 +232,6 @@ Comunque è stato incluso nel core la libreria [html5shiv](https://github.com/aF
 
 Per tutti gli altri che invece guardano avanti verso esperienze frontend strabilianti non si dovranno più preoccupare delle limitazioni di vecchi browser!
 
-Ne vuoi ancora?? Seguici e nelle prossime settimane illustreremo [altre novità]({% post_url 2014-09-13-le-novita-di-drupal8-part5 %}) in arrivo su Drupal 8!
+Ne vuoi ancora?? Seguici e nelle prossime settimane illustreremo [altre novità](/news/le-novita-di-drupal8-part5) in arrivo su Drupal 8!
 
 Fonte: [The Ultimate Guide to Drupal 8](https://www.acquia.com/resources/ebooks/ultimate-guide-drupal-8)

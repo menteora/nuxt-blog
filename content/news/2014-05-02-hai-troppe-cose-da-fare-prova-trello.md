@@ -43,7 +43,7 @@ Come si può facilmente comprendere tutto il programma si basa sul concetto di C
  - In **orizzontale** si sviluppa il nostro piano di azione, che potrebbe essere un semplice *Da fare, In corso, Fatto* a workflow molto più lunghi e precisi, come potremmo vedere in uno dei prossimi articoli.
  - In **verticale** il protagonista è l'importanza, la card più in alto deve essere portata a compimento prima delle successive. 
 
-![Board Trello]({{ site.url }}/images/trello_sample.png)
+![Board Trello](/images/trello_sample.png)
 
 ### Com'è composta una Card?
 
@@ -56,7 +56,7 @@ Dentro ogni singola Card si possono impostare varie opzioni aggiuntive:
 - una data di scadenza (vedi *Due Date*)
 - allegare file (vedi *Attachment*)
 
-![Card Trello]({{ site.url }}/images/trello_card_sample.png)
+![Card Trello](/images/trello_card_sample.png)
 
 ## E' realmente gratuita?
 

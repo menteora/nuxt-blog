@@ -48,7 +48,7 @@ Purtroppo avvicinarsi al mondo della programmazione senza sapere l'inglese è co
 
 Questo è l'unico prerequisito che di serve per accedere al servizio; se ce ne sono di specifici, saranno legati al singolo linguaggio o al corso che vuoi affrontare.
 
-# Quali corsi mette a disposizione gratuitamente
+## Quali corsi mette a disposizione gratuitamente
 
 Con questo primo articolo apro solo l'orizzonte dei corsi a cui si può accedere gratuitamente e a cui probabilmente daremo spazio in futuro.
 

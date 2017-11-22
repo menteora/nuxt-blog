@@ -15,7 +15,7 @@ image:
   creditlink: http://picjumbo.com/corner-of-the-ipad/
 
 ---
-Dopo un lungo periodo di letargo [Dinamicamente.org](www.dinamicamente.org) riparte con una veste grafica completamente nuova.
+Dopo un lungo periodo di letargo [Dinamicamente.org](http://www.dinamicamente.org) riparte con una veste grafica completamente nuova.
 
 Cambia il **logo**, più semplice e minimale.
 
@@ -25,7 +25,7 @@ Cambia il **sito**, sotto il cofano abbiamo una tecnologia completamente nuova: 
 
 Sopratutto da ora in poi sarà visualizzabile da qualsiasi dispositivo **mobile**! *(ed era ora)*
 
-Con questo post iniziamo una [serie di articoli sulla tecnologia]({% post_url 2014-04-12-sotto-al-cofano-di-dinamicamente-jekyll-e-markdown %}) che abbiamo usato per realizzare il nostro blog:
+Con questo post iniziamo una [serie di articoli sulla tecnologia](/news/sotto-al-cofano-di-dinamicamente-jekyll-e-markdown) che abbiamo usato per realizzare il nostro blog:
 
 - Jekyll
 - Markdown

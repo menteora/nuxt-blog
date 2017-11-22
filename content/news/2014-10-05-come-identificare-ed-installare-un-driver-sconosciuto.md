@@ -20,7 +20,7 @@ Se dobbiamo installare un driver di cui conosciamo il nome, il modello ed il pro
 
 Se invece ci troviamo di fronte **"unknown device"**, un driver che non viene riconosciuto dal sistema operativo e di cui sappiamo poco o niente, la cosa si complica.
 
-![Device Manager]({{ site.url }}/images/device-manager.png)
+![Device Manager](/images/device-manager.png)
 
 Prima di installare applicazioni poco convincenti che ci promettono di trovare magicamente i driver non riconosciuti dal nostro sistema operativo, proviamo nel modo più semplice, partiamo con le informazioni che abbiamo già a disposizione.
 
@@ -32,7 +32,7 @@ Su Windows Xp andiamo in **Pannello di Controllo > Sistema > Hardware > Gestione
 
 Selezioniamo il device sconosciuto con il tasto destro ed andiamo in **Proprietà** dove scegliamo la voce **"Dettagli"**
 
-![Dettaglio Driver]({{ site.url }}/images/driver-detail.png)
+![Dettaglio Driver](/images/driver-detail.png)
 
 Qui possiamo trovare già molti indizi:
 
@@ -46,7 +46,7 @@ La combinazione di queste due informazioni ci permetterà di trovare il nostro d
 Nella prima pagina possiamo scrivere la sigla del device in **device search**.
 A questo punto vedremo qualcosa di simile.
 
-![PciDatabase Device Search]({{ site.url }}/images/device-search.png)
+![PciDatabase Device Search](/images/device-search.png)
 
 Nel caso in cui dovessimo avere più righe, dovremmo scegliere quella che ha il **"Vendor Id"** uguale al nostro.
 

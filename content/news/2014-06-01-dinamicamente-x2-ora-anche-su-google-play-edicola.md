@@ -16,9 +16,9 @@ image:
   creditlink: http://www.imcreator.com/images/sonntag-sunday
 ---
 
-Qualche giorno fa ci siamo divertiti a creare un piccolo [indovinello]({% post_url 2014-05-28-trova-le-differenze %}) a cui abbiamo dato seguito sui vari social e dobbiamo ammettere che, pur non essendo di facile soluzione, qualcuno ci è riuscito!
+Qualche giorno fa ci siamo divertiti a creare un piccolo [indovinello](/news/trova-le-differenze) a cui abbiamo dato seguito sui vari social e dobbiamo ammettere che, pur non essendo di facile soluzione, qualcuno ci è riuscito!
 
-In [homepage](www.dinamicamente.org) abbiamo inserito il pulsante di Google Play che permetterà di leggere i nostri articoli anche su [Google Play Edicola](http://google.com/newsstand/s/CBIwoIDcmh8) ... ma solo se siete "piccoli" come suggeriva la foto, quindi solo su schermi mobile di smartphone e tablet.
+In [homepage](http://www.dinamicamente.org) abbiamo inserito il pulsante di Google Play che permetterà di leggere i nostri articoli anche su [Google Play Edicola](http://google.com/newsstand/s/CBIwoIDcmh8) ... ma solo se siete "piccoli" come suggeriva la foto, quindi solo su schermi mobile di smartphone e tablet.
 
 Sicuramente il servizio di Play Edicola è un servizio emergente che ci offre nuove opportunità.
 
@@ -44,10 +44,10 @@ Semplice!
 
 [Cliccate sul link di dinamicamente.org](http://google.com/newsstand/s/CBIwoIDcmh8) e sul pulsante **"+"** in alto a destra.
 
-![Immagine Dinamicamente.org su NewsStand]({{ site.url }}/images/dinamicamente_newsstand.png)
+![Immagine Dinamicamente.org su NewsStand](images/dinamicamente_newsstand.png)
 
 Per leggerci offline una volta aggiunto alla vostra lista di fonti preferite potete selezionarla e cliccare la voce **"Tieni sul dispositivo"**
 
-![Scaricare gli articoli offline]({{ site.url }}/images/newsstand_offline.png)
+![Scaricare gli articoli offline](/images/newsstand_offline.png)
 
 Speriamo che questo nuovo passo di Dinamicamente sia gradito da tutti i nostri lettori.

@@ -49,4 +49,4 @@ Accertatevi di creare una pagina 404 efficace nel caso qualcosa vada storto. Gli
 
 Cosa ne pensate? Quali sono secondo voi gli aspetti che rendono una pagina 404 importante per un sito?
 
-A proposito, vi piace [la nostra pagina 404]({{ site.url }}/404.html)? :D
+A proposito, vi piace [la nostra pagina 404](/404)? :D

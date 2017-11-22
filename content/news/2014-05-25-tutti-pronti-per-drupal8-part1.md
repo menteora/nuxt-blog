@@ -43,6 +43,6 @@ La toolbar di amministrazione è stata totalmente rinnovata ed è anch'essa resp
 
 Molto lavoro è stato fatto anche per diminuire il più possibile l'impatto che ha la parte front-end sulle performance. Ad esempio per i visitatori anonimi Drupal 8 non carica nessun javascript, inoltre caratteristiche che facevano uso massivo di javascript, come il modulo overlay, sono state rimosse in favore di alternative più light e mobile friendly.
 
-Ti è venuta un pò di acquolina in bocca? Leggi [il prossimo articolo]({% post_url 2014-06-08-le-novita-di-drupal8-part2 %}) per scoprire tutte le altre novità su Drupal 8.
+Ti è venuta un pò di acquolina in bocca? Leggi [il prossimo articolo](/news/le-novita-di-drupal8-part2) per scoprire tutte le altre novità su Drupal 8.
 
 Fonte: [The Ultimate Guide to Drupal 8](https://www.acquia.com/resources/ebooks/ultimate-guide-drupal-8)

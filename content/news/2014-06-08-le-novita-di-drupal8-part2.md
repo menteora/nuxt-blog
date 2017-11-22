@@ -17,7 +17,7 @@ image:
 
 Drupal 8 sta per uscire e porta con se un gran numero di migliorie sotto tutti gli aspetti. Che tu sia un Site Builder, uno sviluppatore di moduli o di temi oppure un semplice utilizzatore, Drupal 8 ha una valanga di novità per te.
 
-Con [l'articolo precedente]({% post_url 2014-05-25-tutti-pronti-per-drupal8-part1 %}) abbiamo illustrato le novità in merito di Authoring e Mobile.
+Con [l'articolo precedente](/news/tutti-pronti-per-drupal8-part1) abbiamo illustrato le novità in merito di Authoring e Mobile.
 Oggi invece parleremo delle principali novità per i Site Builders, coloro che plasmano abilmente Drupal per soddisfare le richieste dei propri clienti.
 
 ## Views nel Core!
@@ -57,6 +57,6 @@ Bisogna sottolineare che per la prima volta Drupal avrà già all'interno del su
 
 Il nuovo modulo Tour aiuterà i site builders con una serie di consigli utili che appariranno contestualmente all'attività che si sta svolgendo per fornire una panoramica dell'interfaccia di amministrazione, introdurre le nuove terminologie, seguire passo passo nella configurazione di determinate componenti del sito.
 
-Seguici ancora e tra due settimane illustreremo [altre novità]({% post_url 2014-06-22-le-novita-di-drupal8-part3 %}) in arrivo su Drupal 8!
+Seguici ancora e tra due settimane illustreremo [altre novità](/news/le-novita-di-drupal8-part3) in arrivo su Drupal 8!
 
 Fonte: [The Ultimate Guide to Drupal 8](https://www.acquia.com/resources/ebooks/ultimate-guide-drupal-8)

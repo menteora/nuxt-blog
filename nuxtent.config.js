@@ -1,6 +1,7 @@
 var Prism = require('prismjs');
 require('prismjs/components/prism-php');
 require('prismjs/components/prism-yaml');
+require('prismjs/components/prism-bash');
 
 module.exports = {
   parsers: {

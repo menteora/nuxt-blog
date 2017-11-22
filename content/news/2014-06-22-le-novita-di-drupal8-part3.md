@@ -18,7 +18,7 @@ image:
 
 Drupal 8 sta per uscire e porta con se un gran numero di migliorie sotto tutti gli aspetti. Che tu sia un Site Builder, uno sviluppatore di moduli o di temi oppure un semplice utilizzatore, Drupal 8 ha una valanga di novità per te.
 
-Con [l'articolo precedente]({% post_url 2014-06-08-le-novita-di-drupal8-part2 %}) abbiamo illustrato le novità per i Site Builders.
+Con [l'articolo precedente](/news/le-novita-di-drupal8-part2) abbiamo illustrato le novità per i Site Builders.
 
 Oggi invece ci concentreremo sulle novità della parte Multilingua di Drupal 8.
 
@@ -60,7 +60,7 @@ Per le entità come i nodi, i commenti, i termini di tassonomia, gli utenti esis
 
 Notevoli sforzi sono stati fatti per incrementare la user experience delle funzionalità multilingua di Drupal 8. Vedrete interfacce utente più efficienti e integrate in modo migliore.
 
-![Drupal8 Translation UI]({{ site.url }}/images/drupal8translationform.jpg)
+![Drupal8 Translation UI](/images/drupal8translationform.jpg)
 
 ## Transliteration nel core
 
@@ -76,6 +76,6 @@ Il modulo Content Translation di Drupal 8 si integra molto bene con Search e le 
 
 E' stato aggiunto il supporto per la lingua di amministrazione per consentire una gestione più semplice dei siti multilingua da parte dell'amministratore.
 
-Seguici ancora e nelle prossime settimane illustreremo [altre novità]({% post_url 2014-07-13-le-novita-di-drupal8-part4 %}) in arrivo su Drupal 8!
+Seguici ancora e nelle prossime settimane illustreremo [altre novità](/news/le-novita-di-drupal8-part4) in arrivo su Drupal 8!
 
 Fonte: [The Ultimate Guide to Drupal 8](https://www.acquia.com/resources/ebooks/ultimate-guide-drupal-8)

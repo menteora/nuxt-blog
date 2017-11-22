@@ -27,4 +27,4 @@ Volete un aiuto? ... l'immagine di questo post!
 
 ## Abbiamo pubblicato la soluzione!
 
-Potete leggerla [qui]({% post_url 2014-06-01-dinamicamente-x2-ora-anche-su-google-play-edicola %}).
+Potete leggerla [qui](/news/dinamicamente-x2-ora-anche-su-google-play-edicola).

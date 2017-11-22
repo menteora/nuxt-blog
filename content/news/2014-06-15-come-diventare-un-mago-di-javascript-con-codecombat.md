@@ -16,7 +16,7 @@ image:
   creditlink: http://www.codecombact.com
 ---
 
-Qualche settimana fa abbiamo visto come imparare a programmare per il web semplicemente divertendoci, superando livelli e sopratutto ["scrivendo codice" con CodeSchool]({% post_url 2014-05-18-come-imparare-nuovi-linguaggi-web-semplicemente-divertendosi %}).
+Qualche settimana fa abbiamo visto come imparare a programmare per il web semplicemente divertendoci, superando livelli e sopratutto ["scrivendo codice" con CodeSchool](/news/come-imparare-nuovi-linguaggi-web-semplicemente-divertendosi).
 
 Oggi invece parliamo di un vero e proprio **gioco di ruolo**: [CodeCombat](http://www.codecombat.com), per imparare a programmare in JavaScript.
 
@@ -24,7 +24,7 @@ Oggi invece parliamo di un vero e proprio **gioco di ruolo**: [CodeCombat](http:
 
 Molto semplice.
 
-![CodeCombat Gameplay]({{ site.url }}/images/codecombat-gameplay-simplified.png)
+![CodeCombat Gameplay](/images/codecombat-gameplay-simplified.png)
 
 Selezioniamo il personaggio da controllare, diamo gli ordini e vediamo il risultato sullo schermo.
 
@@ -38,6 +38,7 @@ Lo schermo è diviso in questo modo:
 Vediamo un esempio tratto dal **livello 4**.
 In questo livello abbiamo già imparato a muovere il nostro eroe, dobbiamo liberare la visuale al nostro arciere, muovere l'eroe per attirare l'attenzione dell'orco e farlo colpire dall'arciere.
 
+```javascript
     // Facciamo muovere il nostro eroe a destra
     this.moveRight();
     // Gli facciamo rompere la porta
@@ -51,10 +52,11 @@ In questo livello abbiamo già imparato a muovere il nostro eroe, dobbiamo liber
     this.moveLeft();
     // Comandiamo all'arciere di scoccare la freccia
     this.say("Attack!");
+```
 
 Vediamo uno screenshot del risultato:
 
-![CodeCombat Gameplay]({{ site.url }}/images/codecombat-gameplay-characters.png)
+![CodeCombat Gameplay](/images/codecombat-gameplay-characters.png)
 
 ## Modalità Campagna e Multiplayer
 
@@ -89,7 +91,7 @@ Lo zoom iniziale non fa vedere i personaggi, questo renderebbe il gioco totalmen
 
 Alcuni Javascript potrebbero non essere accettati al caricamento, quindi consiglio di caricarli come nella seguente immagine.
 
-![CodeCombat Security Check]({{ site.url }}/images/codecombat-security.png)
+![CodeCombat Security Check](/images/codecombat-security.png)
 
 ## Conclusioni
 

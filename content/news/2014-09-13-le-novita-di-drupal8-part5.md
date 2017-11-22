@@ -18,7 +18,7 @@ image:
 
 Drupal 8 sta per uscire e porta con se un gran numero di migliorie sotto tutti gli aspetti. Che tu sia un Site Builder, uno sviluppatore di moduli o di temi oppure un semplice utilizzatore, Drupal 8 ha una valanga di novità per te.
 
-Con [l'articolo precedente]({% post_url 2014-07-13-le-novita-di-drupal8-part4 %}) abbiamo illustrato le novità relativamente al frontend.
+Con [l'articolo precedente](/news/le-novita-di-drupal8-part4) abbiamo illustrato le novità relativamente al frontend.
 
 Oggi invece ci concentreremo sulle novità della parte Backend di Drupal 8.
 
@@ -32,7 +32,7 @@ Drupal 8 ha già un'interfaccia grafica basilare per importare/esportare singole
 
 Il workflow tipico quando si effettuano delle modifiche in dev e bisogna riportarle in produzione è illustrato dalla seguente immagine
 
-![Drupal8 Config Workflow]({{ site.url }}/images/d8-config-workflow.jpg)
+![Drupal8 Config Workflow](/images/d8-config-workflow.jpg)
 
   1. sul sito dev esportare la active configuration sotto forma di archivio tar contenente parecchi file YAML
   2. sul sito di produzione importare il file che verrà salvato nella staging area
@@ -51,9 +51,7 @@ Le entity sono un nuovo concetto chiave introdotto già in Drupal 7, che permett
 
 In Drupal 8 le Entity API sono state notevolmente migliorate. Tutte le entity adesso sono oggetti di specifiche classi che implementano un'interfaccia standard ([EntityInterface](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Entity%21EntityInterface.php/interface/EntityInterface/8)). Ecco un piccolo esempio di prima e dopo:
 
-{% highlight php %}
-{% raw %}
-
+```php
 <?php
 # Drupal 7 code.
 $node->title
@@ -63,27 +61,25 @@ $node->body[$langcode][0]['value']
 $node->get('title')->value
 $node->get('body')->value
 ?>
-
-{% endraw %}
-{% endhighlight %}
+```
 
 Esistono due tipi di entity: Config Entity e Content Entity. Che differenze ci sono tra i due?
 
 | Content Entities								| Config Entities										|
 |-----------------------------------------------|-------------------------------------------------------|
-| * E' possibile personalizzare i campi			| * E' possibile fare il deploy su ambienti differenti	|
-| * Salvati nelle tabelle del db (di default)	| * Salvati nel configuration system					|
-| * Solitamente create nel frontend				| * Solitamente create nel backend 						|
+| - E' possibile personalizzare i campi			| - E' possibile fare il deploy su ambienti differenti	|
+| - Salvati nelle tabelle del db (di default)	| - Salvati nel configuration system					|
+| - Solitamente create nel frontend				| - Solitamente create nel backend 						|
 
 | Esempi               							| Esempi 												|
 |-----------------------------------------------|-------------------------------------------------------|
-| * Nodi    									| * Tipi di contenuto									|
-| * Blocchi Custom    							| * Tipi di blocco custom								|
-| * Utenti    									| * Ruoli utente										|
-| * Commenti    								| * Viste												|
-| * Termini di tassonomia    					| * Vocabolari											|
-| * Menu Link    								| * Menu												|
-| * Aggregatori Feeds/Items 					| * Stili di immagine 									|
+| - Nodi    									| - Tipi di contenuto									|
+| - Blocchi Custom    							| - Tipi di blocco custom								|
+| - Utenti    									| - Ruoli utente										|
+| - Commenti    								| - Viste												|
+| - Termini di tassonomia    					| - Vocabolari											|
+| - Menu Link    								| - Menu												|
+| - Aggregatori Feeds/Items 					| - Stili di immagine 									|
 
 Nelle Content Entities sono state introdotte le revisioni e la possibilità di aggiungere commenti a qualsiasi content entity.
 
@@ -101,7 +97,7 @@ Successivamente è possibile impostare dei permessi specifici su determinati ruo
 
 Una volta che i moduli RESTFul sono stati configurati a dovere sarà possibile ottenere dati dal sito in formato machine-readable, come questi:
 
-{% raw %}
+```php
 	...
    	[title] => Array
     	(
@@ -124,7 +120,7 @@ Una volta che i moduli RESTFul sono stati configurati a dovere sarà possibile o
 
 	    )
 	...
-{% endraw %}
+```
 
 Qual è il vantaggio? Ad esempio quello di poter ottenere da Drupal 8 dati in formato JSON per poi visualizzarli in una app [JQuery Mobile standalone](https://github.com/webchickenator/d8ws)!
 
@@ -132,7 +128,7 @@ Drupal 8 contiene anche una nuova libreria di nome [Guzzle](http://guzzle.readth
 
 Un altra feature offerta dai moduli RESTful WebServices è la possibilità di aggiungere una visualizzazione di tipo "REST export" a qualsiasi vista.
 
-![Drupal8 Rest Export]({{ site.url }}/images/d8-rest-export.png)
+![Drupal8 Rest Export](/images/d8-rest-export.png)
 
 ## Caching migliorato
 
@@ -144,6 +140,6 @@ Una nota finale è che il sistema di caching di Drupal 8 è stato notevolmente m
 
 Queste nuove caratteristiche dovrebbero già migliorare di molto il caricamento delle pagine. Si sta comunque lavorando sodo per [migliorare ulteriormente le performance di Drupal 8](https://www.drupal.org/node/1744302).
 
-Seguici e nelle prossime settimane illustreremo [altre novità]({% post_url 2014-09-29-le-novita-di-drupal8-part6 %}) in arrivo su Drupal 8!
+Seguici e nelle prossime settimane illustreremo [altre novità](le-novita-di-drupal8-part6) in arrivo su Drupal 8!
 
 Fonte: [The Ultimate Guide to Drupal 8](https://www.acquia.com/resources/ebooks/ultimate-guide-drupal-8)

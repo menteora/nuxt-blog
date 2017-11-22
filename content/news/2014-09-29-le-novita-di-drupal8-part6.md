@@ -18,7 +18,7 @@ image:
 
 Drupal 8 sta per uscire e porta con se un gran numero di migliorie sotto tutti gli aspetti. Che tu sia un Site Builder, uno sviluppatore di moduli o di temi oppure un semplice utilizzatore, Drupal 8 ha una valanga di novità per te.
 
-Con [l'articolo precedente]({% post_url 2014-09-13-le-novita-di-drupal8-part5 %}) abbiamo illustrato le novità relativamente al backend.
+Con [l'articolo precedente](/news/le-novita-di-drupal8-part5) abbiamo illustrato le novità relativamente al backend.
 
 Oggi proseguiremo in ambito coding illustrando alcuni importanti cambiamenti per gli sviluppatori Drupal. Tramite esempi pratici vedremo le differenze tra l'approccio allo sviluppo utilizzato fin'ora e quello a cui dovremmo abituarci con Drupal 8. **ATTENZIONE: E' sconsigliata la lettura di questo articolo agli sviluppatori nostalgici!** :)
 
@@ -44,17 +44,13 @@ Tutti i moduli Drupal hanno bisogno di un file `.info` per essere registrati dal
 
 ### Drupal 7: example.info
 
-{% highlight php %}
-{% raw %}
-
+```php
 name = Example
 description = An example module.
 core = 7.x
 files[] = example.test
 dependencies[] = user
-
-{% endraw %}
-{% endhighlight %}
+```
 
 Il formato è in stile file INI ma adotta alcuni "Drupalismi" come la sintassi per gli `array[]`. La voce `files[]`, che innesca il class autoloader custom di Drupal 7, è tipica di Drupal e chi sviluppa moduli a oggetti deve aggiungere una riga `files[]` per ogni file in cui è definita una classe, e in alcuni casi questo può portare a vedere [cose un po' folli](http://drupalcode.org/project/views.git/blob/refs/heads/7.x-3.x:/views.info).
 
@@ -62,9 +58,7 @@ In Drupal 8 i file info sono semplici file YAML, uguali a quelli utilizzati da a
 
 #### Drupal 8: example.info.yml
 
-{% highlight php %}
-{% raw %}
-
+```yaml
 name: Example
 description: An example module.
 core: 8.x
@@ -72,9 +66,7 @@ dependencies:
   - user
 # Note: New property required as of Drupal 8!
 type: module
-
-{% endraw %}
-{% endhighlight %}
+```
 
 La sintassi è simile, e di conseguenza la leggibilità e la semplicità di stesura dei file info rimane inviariata. La voce `files[]` è sparita in favore degli standard [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) per l'autoloading delle classi, via Composer. Quindi se seguiamo una convenzione specifica nel nominare le classi e le cartelle (modules/example/src/ExampleClass.php) Drupal è in grado di caricare codice object oriented automaticamente senza nessun intervento manuale.
 
@@ -86,9 +78,7 @@ In Drupal 7 l'hook_menu viene utilizzato per definire determinate url e le callb
 
 **example.module**
 
-{% highlight php %}
-{% raw %}
-
+```php
 <?php
 /**
  * Implements hook_menu().
@@ -111,9 +101,7 @@ function _example_page() {
   return array('#markup' => t('Hello world.'));
 }
 ?>
-
-{% endraw %}
-{% endhighlight %}
+```
 
 L'esempio sopra è un tipico modulo hello world per Drupal 7. Viene definita un'URL `/hello` che verifica se l'utente ha i permessi per accedere ai contenuti prima di innescare una callback (`_example_page()`) che stampa "Hello world" in una pagina.
 
@@ -125,24 +113,18 @@ Drupal 8 adotta invece un nuovo [sistema di routing](https://drupal.org/developi
 
 **example.routing.yml**
 
-{% highlight php %}
-{% raw %}
-
+```yaml
 example.hello:
   path: '/hello'
   defaults:
     _content: '\Drupal\example\Controller\Hello::content'
   requirements:
     _permission: 'access content'
-
-{% endraw %}
-{% endhighlight %}
+```
 
 **src/Controller/Hello.php**
 
-{% highlight php %}
-{% raw %}
-
+```php
 <?php
 namespace Drupal\example\Controller;
 
@@ -157,14 +139,12 @@ class Hello extends ControllerBase {
   }
 }
 ?>
-
-{% endraw %}
-{% endhighlight %}
+```
 
 Come si vede dall'esempio sopra adesso i path e la verifica degli accessi risiedono in un file YAML, e si utilizza la stessa sintassi del sistema di routing di [Symfony](http://symfony.com/doc/current/book/routing.html). La callback adesso risiede in una classe "Controller" (secondo il pattern [MVC](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)) contenuta a sua volta in una cartella nominata in modo specifico, come vuole lo standard PSR-4. La classe Controller viene dichiarata nel "namespace" del modulo specifico così da evitare conflitti tra i nomi di classi di altri moduli. Infine viene resa disponibile la logica della classe [ControllerBase](https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Controller!ControllerBase.php/class/ControllerBase/8), tramite l'istruzione `use`, che la nostra classe custom estenderà. In questo modo all'interno della classe controller `Hello` sarà possibile utilizzare tutti i metodi della classe ControllerBase, come `$this->t()` (il modo object oriented di richiamare la funzione `t()`). Inoltre dato che ControllerBase è una classe PHP standard, tutte le sue proprietà e metodi verranno autocompletati negli IDE.
 
 ## Ehi non finisce qui
 
-Tenete le mandibole serrate, questo era solo un assaggio! Seguiteci e tra due settimane illustreremo [altre novità]({% post_url 2014-10-11-le-novita-di-drupal8-part7 %}) in ambito coding in arrivo su Drupal 8! Se proprio non ce la fate ad aspettare potete proseguire la lettura nell'[articolo originale](https://www.acquia.com/blog/ultimate-guide-drupal-8-episode-7-code-changes-drupal-8) in inglese sul blog di Acquia.
+Tenete le mandibole serrate, questo era solo un assaggio! Seguiteci e tra due settimane illustreremo [altre novità](/news/le-novita-di-drupal8-part7) in ambito coding in arrivo su Drupal 8! Se proprio non ce la fate ad aspettare potete proseguire la lettura nell'[articolo originale](https://www.acquia.com/blog/ultimate-guide-drupal-8-episode-7-code-changes-drupal-8) in inglese sul blog di Acquia.
 
 Fonte: [The Ultimate Guide to Drupal 8](https://www.acquia.com/resources/ebooks/ultimate-guide-drupal-8)
