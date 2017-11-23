@@ -4,8 +4,8 @@
     <nuxt-page-logo />
 
     <v-container fluid grid-list-md>
-      <v-layout row wrap>
-        <v-flex xs12 sm12 md12>
+      <v-layout column justify-center align-center>
+        <v-flex xs12 sm8 md8>
           <v-card>
             <v-card-text>
               <h1 class="display-1">{{ page.title }}</h1>
