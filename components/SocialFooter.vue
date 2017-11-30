@@ -41,7 +41,7 @@
               <span>Linkedin</span>
             </v-tooltip>
           </network>
-          <network network="whatsapp">
+          <network network="whatsapp" class="hidden-sm-and-down">
             <v-tooltip top>
               <v-btn icon flat slot="activator" class="green--text mr-3 ml-3">
                 <v-icon>fa-whatsapp</v-icon>
@@ -49,7 +49,7 @@
               <span>Whatsapp</span>
             </v-tooltip>
           </network>
-          <network network="telegram">
+          <network network="telegram" class="hidden-sm-and-down">
             <v-tooltip top>
               <v-btn icon flat slot="activator" class="blue--text mr-3 ml-3">
                 <v-icon>fa-telegram</v-icon>
@@ -57,7 +57,7 @@
               <span>Telegram</span>
             </v-tooltip>
           </network>
-          <network network="email">
+          <network network="email" class="hidden-sm-and-down">
             <v-tooltip top>
               <v-btn icon flat slot="activator" class="mr-3 ml-3">
                 <v-icon>fa-envelope</v-icon>
@@ -65,7 +65,7 @@
               <span>E-mail</span>
             </v-tooltip>
           </network>
-          <network network="skype">
+          <network network="skype" class="hidden-sm-and-down">
             <v-tooltip top>
               <v-btn icon flat slot="activator" class="blue--text mr-3 ml-3">
                 <v-icon>fa-skype</v-icon>
@@ -73,7 +73,7 @@
               <span>Skype</span>
             </v-tooltip>
           </network>
-          <network network="pinterest">
+          <network network="pinterest" class="hidden-sm-and-down">
             <v-tooltip top>
               <v-btn icon flat slot="activator" class="red--text mr-3 ml-3">
                 <v-icon>fa-pinterest</v-icon>
@@ -81,7 +81,7 @@
               <span>Pinterest</span>
             </v-tooltip>
           </network>
-          <network network="reddit">
+          <network network="reddit" class="hidden-sm-and-down">
             <v-tooltip top>
               <v-btn icon flat slot="activator" class="mr-3 ml-3">
                 <v-icon>fa-reddit</v-icon>
@@ -89,7 +89,7 @@
               <span>Reddit</span>
             </v-tooltip>
           </network>
-          <network network="sms">
+          <network network="sms" class="hidden-sm-and-down">
             <v-tooltip top>
               <v-btn icon flat slot="activator" class="mr-3 ml-3">
                 <v-icon>fa-commenting-o</v-icon>
