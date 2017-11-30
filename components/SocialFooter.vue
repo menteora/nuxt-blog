@@ -1,7 +1,6 @@
 <template>
   <v-footer fixed app>
     <v-spacer></v-spacer>
-    <div class="subheading"><i><b>condividi</b></i></div><v-icon class="red--text">keyboard_arrow_right</v-icon>
      <social-sharing 
         :to="to" 
         :title="title" 
