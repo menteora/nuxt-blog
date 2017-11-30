@@ -1,45 +1,12 @@
 <template>
-<v-container fluid grid-list-md>
-  <v-layout row wrap>
-    <v-flex d-flex xs12>
-      <v-card>
-        <v-card-media class="hidden-sm-and-down" :src="'/images/'+post.image.feature" v-if="post.image.feature" height="600px">
-        </v-card-media>
-        <v-card-media class="hidden-md-and-up" :src="'/images/'+post.image.feature" v-if="post.image.feature" height="200px">
-        </v-card-media>
-      </v-card>
-    </v-flex>
-  </v-layout>
-  <v-layout row wrap>
-    <v-flex d-flex xs12 sm4 md3>
-      <v-layout column>
-        <v-flex pa-3>
-          <v-flex>
-            <v-avatar :tile=false class="grey lighten-4" size="100px">
-              <img :src="'/images/'+post.author+'.png'" alt="avatar">
-            </v-avatar>
-          </v-flex>
-          <v-flex>
-            <h2>by {{post.author}}</h2>
-          </v-flex>
-          <v-flex>
-            <p><v-icon>label</v-icon> {{ post.category }}</p>
-            <p><v-icon>loyalty</v-icon> {{ post.tags.toString() }}</p>
-            <p><v-icon>event</v-icon> {{ post.date }}</p>
-        </v-flex>
-        </v-flex>
-      </v-layout>
-    </v-flex>
-    <v-flex xs12 sm7 md8>
-      <v-card>
-        <v-card-text>
-          <h1 class="display-1">{{ post.title }}</h1>
-          <nuxtent-body :body="post.body" />
-        </v-card-text>
-      </v-card>
-    </v-flex>
-    <v-flex d-flex xs12 sm1 md1>
-      <social-sharing :to="post.permalink" :title="post.title" :description="post.description" :hashtags="post.tags.toString()" twitter-user="dinamicamente" inline-template>
+  <v-footer>
+     <social-sharing url="https://vuejs.org/"
+                      title="The Progressive JavaScript Framework"
+                      description="Intuitive, Fast and Composable MVVM for building interactive interfaces."
+                      quote="Vue is a progressive framework for building user interfaces."
+                      hashtags="vuejs,javascript,framework"
+                      twitter-user="vuejs"
+                      inline-template>
         <div>
           <network network="facebook">
             <v-tooltip top>
@@ -131,55 +98,11 @@
           </network>
         </div>
       </social-sharing>
-    </v-flex>
-  </v-layout>
-  <footer></footer>
-</v-container>
+  </v-footer>
 </template>
-<script>
-import Footer from '~/components/Footer.vue'
 
+<script>
   export default {
-    components: {
-      Footer
-    },
-    asyncData: async ({
-      app,
-      route,
-      payload
-    }) => ({
-      post: await app.$content('/news').get(route.path) || payload
-    })
+
   }
 </script>
-
-<style>
-  /*  @media screen and (min-width: 960px) {
-    #absolute {
-      position: absolute;
-      top: 300px;
-    }
-  }
-*/
-
-  h2 {
-    font-size: 24px!important;
-    font-weight: 400;
-    line-height: 32px!important;
-    letter-spacing: normal!important;
-  }
-
-  p {
-    font-size: 16px!important;
-    font-weight: 400;
-  }
-
-  li {
-    font-size: 16px!important;
-    font-weight: 400;
-  }  
-  /*#myparallax {
-    opacity: 0.7;
-    filter: alpha(opacity=70);
-}*/
-</style>
