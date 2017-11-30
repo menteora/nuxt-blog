@@ -1,5 +1,5 @@
 <template>
-<v-container fluid grid-list-md>
+<div>
   <v-layout row wrap>
     <v-flex d-flex xs12>
       <v-card>
@@ -46,7 +46,7 @@
     :hashtags="post.tags.toString()" 
     twitter-user="dinamicamente"
   ></social-footer>
-</v-container>
+</div>
 </template>
 <script>
 import SocialFooter from '~/components/SocialFooter.vue'
