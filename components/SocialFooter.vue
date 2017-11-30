@@ -1,5 +1,7 @@
 <template>
-  <v-footer fixed>
+  <v-footer fixed app>
+    <v-spacer></v-spacer>
+    <div class="subheading"><i><b>condividi</b></i></div><v-icon class="red--text">keyboard_arrow_right</v-icon>
      <social-sharing 
         :to="to" 
         :title="title" 
@@ -11,7 +13,7 @@
           <network network="facebook">
             <v-tooltip top class="ma-0 pa-0">
               <v-btn icon flat slot="activator" class="blue--text mr-3 ml-3">
-                <v-icon >fa-facebook-official</v-icon>
+                <v-icon>fa-facebook-official</v-icon>
               </v-btn>
               <span>Facebook</span>
             </v-tooltip>
