@@ -11,7 +11,7 @@
     </v-flex>
   </v-layout>
   <v-layout row wrap>
-    <v-flex d-flex xs12 sm4 md3>
+    <v-flex d-flex xs12 sm4 md2>
       <v-layout column>
         <v-flex pa-3>
           <v-flex>
