@@ -1,16 +1,10 @@
 <template>
 <div>
   <v-layout row wrap>
-    <v-flex d-flex xs12>
-      <v-card>
-        <v-card-media class="hidden-sm-and-down" :src="'/images/'+post.image.feature" v-if="post.image.feature" height="600px">
-        </v-card-media>
-        <v-card-media class="hidden-md-and-up" :src="'/images/'+post.image.feature" v-if="post.image.feature" height="200px">
-        </v-card-media>
-      </v-card>
+
+    <v-flex xs12>
+      <v-avatar tile size="100%"><img :src="'/images/'+post.image.feature" v-if="post.image.feature"></v-avatar>
     </v-flex>
-  </v-layout>
-  <v-layout row wrap>
     <v-flex d-flex xs12 sm4 md2>
       <v-layout column>
         <v-flex pa-3>
@@ -30,13 +24,9 @@
         </v-flex>
       </v-layout>
     </v-flex>
-    <v-flex xs12 sm7 md8>
-      <v-card>
-        <v-card-text>
-          <h1 class="display-1">{{ post.title }}</h1>
-          <nuxtent-body :body="post.body" />
-        </v-card-text>
-      </v-card>
+    <v-flex xs12 sm6 md8 class="mt-5">
+      <h1 class="display-1">{{ post.title }}</h1>
+      <nuxtent-body :body="post.body" />
     </v-flex>
   </v-layout>
   <social-footer 

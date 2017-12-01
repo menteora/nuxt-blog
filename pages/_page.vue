@@ -5,13 +5,9 @@
 
     <v-container fluid grid-list-md>
       <v-layout column justify-center align-center>
-        <v-flex xs12 sm8 md8>
-          <v-card>
-            <v-card-text>
-              <h1 class="display-1">{{ page.title }}</h1>
-              <nuxtent-body :body="page.body" />
-            </v-card-text>
-          </v-card>
+        <v-flex xs12 sm6 md8>
+          <h1 class="display-1">{{ page.title }}</h1>
+          <nuxtent-body :body="page.body" />
         </v-flex>
       </v-layout>
     </v-container>
