@@ -35,7 +35,7 @@
       </v-container>
     </v-content>
   </main>
-  <cookie-law-footer/>
+  <cookie-law-footer></cookie-law-footer>
 </v-app>
 </template>
 
