@@ -7,8 +7,3 @@
     </cookie-law>
   </footer>
 </template>
-
-<script>
-  export default {
-  }
-</script>
