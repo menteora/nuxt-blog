@@ -1,21 +1,14 @@
 <template>
-<h1>{{cookieAccepted}}</h1>
+  <div>
+    <h1 v-if="$store.state.isCookieAccepted" >{{$store.state.isCookieAccepted}} great work!</h1>
+    <h1 v-else>{{$store.state.isCookieAccepted}} wtf!</h1>
+  </div>
 </template>
 
 <script>
   export default {
-    data: function () {
-      return {
-        cookieAccepted: false
-      }
-    },
     created () {
-    },
-    methods: {
-      cookieAccepted: function () {
-        this.cookieAccepted = localStorage.getItem('cookie:accepted')
-      }
+      this.$store.commit('setCookieStatus')
     }
-
   }
 </script>

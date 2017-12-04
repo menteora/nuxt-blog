@@ -41,12 +41,10 @@
 </template>
 <script>
 import SocialFooter from '~/components/SocialFooter.vue'
-import FacebookComments from '~/components/FacebookComments.vue'
 
 export default {
   components: {
-    SocialFooter,
-    FacebookComments
+    SocialFooter
   },
   asyncData: async ({
     app,
