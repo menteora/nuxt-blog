@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1 v-if="$store.state.isCookieAccepted" >{{$store.state.isCookieAccepted}} great work!</h1>
-    <h1 v-else>{{$store.state.isCookieAccepted}} wtf!</h1>
+    <h5 v-if="$store.state.isCookieAccepted">comment enabled</h5>
+    <h5 v-else>comment disabled</h5>
   </div>
 </template>
 
