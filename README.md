@@ -8,6 +8,13 @@
 
 ![dinamicamente](static/images/dinamicamente-front-mobile.png)
 
+# Features
+- [x] Markdown content for pages and posts
+- [x] Highlight code inside posts
+- [x] Post shareable with social with [Vue Social Sharing](https://github.com/nicolasbeauvais/vue-social-sharing)
+- [ ] Cookie Law Compliant with [Vue Cookie Law](https://github.com/apertureless/vue-cookie-law)
+
+
 # Prerequisite
 
 [AVN](https://github.com/wbyoung/avn) - (optional) Automatic Version Switching for Node.js
