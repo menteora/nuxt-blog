@@ -35,12 +35,15 @@
       </v-container>
     </v-content>
   </main>
-  
+  <cookie-law-footer></cookie-law-footer>
 </v-app>
 </template>
 
 <script>
+  import CookieLawFooter from '~/components/CookieLawFooter'
+
   export default {
+    components: { CookieLawFooter },
     data () {
       return {
         clipped: true,

@@ -27,6 +27,7 @@
     <v-flex xs12 sm6 md8 class="mt-5">
       <h1 class="display-1">{{ post.title }}</h1>
       <nuxtent-body :body="post.body" />
+      <facebook-comments></facebook-comments>
     </v-flex>
   </v-layout>
   <social-footer 
