@@ -9,8 +9,8 @@
 ![dinamicamente](static/images/dinamicamente-front-mobile.png)
 
 # Features
-- [x] Markdown content for pages and posts
-- [x] Highlight code inside posts
+- [x] Markdown content for pages and posts with [Nuxtent](https://github.com/nuxt-community/nuxtent-module)
+- [x] Highlight code inside posts with [Prismjs](http://prismjs.com/)
 - [x] Post shareable with social with [Vue Social Sharing](https://github.com/nicolasbeauvais/vue-social-sharing)
 - [x] Cookie Law Compliant with [Vue Cookie Law](https://github.com/apertureless/vue-cookie-law)
 - [ ] Facebook Comments
@@ -23,7 +23,6 @@
 
 - [Vuetify](https://github.com/vuetifyjs/vuetify) - Material Design ROCKS!
 - [Nuxt](https://github.com/nuxt/nuxt.js) - Generate static Site!
-- [Nuxtent](https://github.com/nuxt-community/nuxtent-module) - Make md file accessible inside Nuxt pages
 - [Ftp Deploy](https://github.com/simonh1000/ftp-deploy) - Deploy static site over FTP
 
 # Build Setup
@@ -41,6 +40,9 @@ $ npm start
 
 # generate static project
 $ npm run generate
+
+# generate static project and test locally with http-server module
+$ npm run generate:dev
 ```
 
 For detailed explanation on how things work, check out the [Nuxt.js](https://github.com/nuxt/nuxt.js) and [Vuetify.js](https://vuetifyjs.com/) documentation.
