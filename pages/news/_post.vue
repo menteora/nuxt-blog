@@ -29,7 +29,7 @@
       <nuxtent-body :body="post.body"></nuxtent-body>
     </v-flex>
     <v-flex xs12 sm6 md8 class="mt-5">
-      <no-ssr><facebook-comments></facebook-comments></no-ssr>
+      <no-ssr><facebook-comments/></no-ssr>
     </v-flex>
   </v-layout>
   <social-footer 

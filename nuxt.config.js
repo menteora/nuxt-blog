@@ -24,7 +24,7 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' }
     ]
   },
-  plugins: ['~/plugins/vuetify.js', '~/plugins/vue-social-sharing.js', {src: '~plugins/vue-cookie-law.js', ssr: false} ],
+  plugins: ['~/plugins/vuetify.js', '~/plugins/vue-social-sharing.js'],
   css: ['~/assets/style/app.styl', 'prismjs/themes/prism-coy.css'],
   modules: [
     'nuxtent',
