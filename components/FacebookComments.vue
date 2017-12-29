@@ -1,6 +1,26 @@
 <template>
-  <h5 v-if="$store.state.isCookieAccepted">comment enabled</h5>
-  <h5 v-else>comment disabled</h5>
+  <no-ssr>
+    <div
+      :permalink="permalink"
+    >
+      <div id=fb_thread>
+        <h3>Commenti</h3>
+        <div v-if="$store.state.isCookieAccepted" class="fb-comments" :data-href="permalink" data-numposts="5"></div>
+        <div v-else>Per commentare devi prima accettare i cookie.</div>
+      </div>
+      <div id="fb-root"></div>
+      <script v-if="$store.state.isCookieAccepted">
+        (function (d, s, id) {
+          var js
+          var fjs = d.getElementsByTagName(s)[0]
+          if (d.getElementById(id)) return
+          js = d.createElement(s); js.id = id
+          js.src = '//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.8&appId={{$store.state.facebookAppId}}'
+          fjs.parentNode.insertBefore(js, fjs)
+        }(document, 'script', 'facebook-jssdk'))
+      </script>
+    </div>
+  </no-ssr>
 </template>
 
 <script>
@@ -10,6 +30,7 @@
 (putting "/" at the end of the url)
 */
 export default {
+  props: ['permalink'],
   created () {
     this.$store.commit('setCookieStatus')
   }

@@ -1,5 +1,6 @@
 export const state = () => ({
-  isCookieAccepted: false
+  isCookieAccepted: false,
+  facebookAppId: 384531881580043
 })
 
 export const mutations = {
