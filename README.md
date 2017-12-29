@@ -13,7 +13,7 @@
 - [x] Highlight code inside posts with [Prismjs](http://prismjs.com/)
 - [x] Post shareable with social with [Vue Social Sharing](https://github.com/nicolasbeauvais/vue-social-sharing)
 - [x] Cookie Law Compliant with [Vue Cookie Law](https://github.com/apertureless/vue-cookie-law)
-- [ ] Facebook Comments
+- [x] Facebook Comments
 
 # Prerequisite
 

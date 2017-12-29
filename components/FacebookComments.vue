@@ -1,11 +1,9 @@
 <template>
-  <no-ssr>
     <div
       :permalink="permalink"
     >
-      <div id=fb_thread>
-        <h3>Commenti</h3>
-        <div v-if="$store.state.isCookieAccepted" class="fb-comments" :data-href="permalink" data-numposts="5"></div>
+      <div id=fb_thread class="text-xs-center">
+        <div v-if="$store.state.isCookieAccepted" class="fb-comments" :data-href="baseUrl" data-numposts="5" data-width="100%"></div>
         <div v-else>Per commentare devi prima accettare i cookie.</div>
       </div>
       <div id="fb-root"></div>
@@ -20,7 +18,6 @@
         }(document, 'script', 'facebook-jssdk'))
       </script>
     </div>
-  </no-ssr>
 </template>
 
 <script>
@@ -31,6 +28,9 @@
 */
 export default {
   props: ['permalink'],
+  data: function () {
+    return { baseUrl: window.location.origin + this.permalink }
+  },
   created () {
     this.$store.commit('setCookieStatus')
   }

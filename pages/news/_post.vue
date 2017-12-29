@@ -27,14 +27,11 @@
     <v-flex xs12 sm6 md8 class="mt-5">
       <h1 class="display-1">{{ post.title }}</h1>
       <nuxtent-body :body="post.body"></nuxtent-body>
-    </v-flex>
-    <v-flex xs12 sm6 md8 class="mt-5">
-      <no-ssr>
+            <no-ssr>
         <facebook-comments
-          :permalink="post.permalink"
+          :permalink="post.jekyll_permalink || post.permalink"
         ></facebook-comments>
       </no-ssr>
-      <h1>{{process}}</h1>
     </v-flex>
   </v-layout>
   <social-footer 
@@ -55,18 +52,14 @@ export default {
     SocialFooter,
     FacebookComments
   },
-  asyncData: async ({
-    app,
-    route,
-    payload
-  }) => ({
-    post: await app.$content('/news').get(route.path) || payload
+  asyncData: async ({ app, route, payload }) => ({
+    post: (await app.$content('/news').get(route.path)) || payload
   })
 }
 </script>
 
 <style>
-  /*  @media screen and (min-width: 960px) {
+/*  @media screen and (min-width: 960px) {
     #absolute {
       position: absolute;
       top: 300px;
@@ -74,23 +67,23 @@ export default {
   }
 */
 
-  h2 {
-    font-size: 24px!important;
-    font-weight: 400;
-    line-height: 32px!important;
-    letter-spacing: normal!important;
-  }
+h2 {
+  font-size: 24px !important;
+  font-weight: 400;
+  line-height: 32px !important;
+  letter-spacing: normal !important;
+}
 
-  p {
-    font-size: 16px!important;
-    font-weight: 400;
-  }
+p {
+  font-size: 16px !important;
+  font-weight: 400;
+}
 
-  li {
-    font-size: 16px!important;
-    font-weight: 400;
-  }  
-  /*#myparallax {
+li {
+  font-size: 16px !important;
+  font-weight: 400;
+}
+/*#myparallax {
     opacity: 0.7;
     filter: alpha(opacity=70);
 }*/
