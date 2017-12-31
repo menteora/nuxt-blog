@@ -19,7 +19,7 @@
           <v-flex>
             <p><v-icon>label</v-icon> {{ post.category }}</p>
             <p><v-icon>loyalty</v-icon> {{ post.tags.toString() }}</p>
-            <p><v-icon>event</v-icon> {{ post.date }}</p>
+            <p><v-icon>event</v-icon> {{ post.modified | moment("dddd, DD MMMM YYYY") }}</p>
         </v-flex>
         </v-flex>
       </v-layout>

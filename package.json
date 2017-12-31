@@ -20,6 +20,7 @@
     "prismjs": "^1.8.4",
     "underscore": "^1.8.3",
     "vue-cookie-law": "^1.4.0",
+    "vue-moment": "^3.1.0",
     "vue-no-ssr": "^0.2.2",
     "vue-social-sharing": "^2.2.10",
     "vuetify": "^0.16.9"
