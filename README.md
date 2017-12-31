@@ -13,7 +13,7 @@
 - [x] Highlight code inside posts with [Prismjs](http://prismjs.com/)
 - [x] Post shareable with social with [Vue Social Sharing](https://github.com/nicolasbeauvais/vue-social-sharing)
 - [x] Cookie Law Compliant with [Vue Cookie Law](https://github.com/apertureless/vue-cookie-law)
-- [x] Facebook Comments
+- [x] Facebook Comments with [standard sdk](https://developers.facebook.com/docs/plugins/comments/)
 
 # Prerequisite
 
@@ -24,6 +24,7 @@
 - [Vuetify](https://github.com/vuetifyjs/vuetify) - Material Design ROCKS!
 - [Nuxt](https://github.com/nuxt/nuxt.js) - Generate static Site!
 - [Ftp Deploy](https://github.com/simonh1000/ftp-deploy) - Deploy static site over FTP
+- [Vue Moment](https://github.com/brockpetrie/vue-moment) - Parsing and filtering date faster
 
 # Build Setup
 

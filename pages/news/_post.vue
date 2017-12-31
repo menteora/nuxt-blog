@@ -27,11 +27,15 @@
     <v-flex xs12 sm6 md8 class="mt-5">
       <h1 class="display-1">{{ post.title }}</h1>
       <nuxtent-body :body="post.body"></nuxtent-body>
-            <no-ssr>
-        <facebook-comments
-          :permalink="post.jekyll_permalink || post.permalink"
-        ></facebook-comments>
-      </no-ssr>
+    </v-flex>
+  </v-layout>
+  <v-layout justify-center>
+    <v-flex xs12 sm6 md8 class="mt-5">
+        <no-ssr>
+          <facebook-comments
+            :permalink="post.jekyll_permalink || post.permalink"
+          ></facebook-comments>
+        </no-ssr>
     </v-flex>
   </v-layout>
   <social-footer 
