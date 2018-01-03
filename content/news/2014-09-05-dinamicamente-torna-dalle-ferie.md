@@ -8,7 +8,7 @@ tags:         [informazione]
 comments:     true
 share:        true
 modified:     2014-09-05
-permalink:    /dinamicamente-torna-dalle-ferie
+jekyll_permalink:    /dinamicamente-torna-dalle-ferie
 image:
   feature:    homecoming.jpg
   preview:    homecoming-thumb.png

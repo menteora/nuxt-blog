@@ -8,7 +8,7 @@ tags:         [test, codice compilato]
 comments:     true
 share:        true
 modified:     2014-10-23
-permalink:    /ideone-testiamo-online-il-codice-senza-compilatore
+jekyll_permalink:    /ideone-testiamo-online-il-codice-senza-compilatore
 image:
   feature:    hello-world-comic.jpg
   preview:    hello-world-comic-thumb.jpg

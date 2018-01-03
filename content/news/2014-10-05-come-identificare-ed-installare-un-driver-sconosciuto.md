@@ -8,7 +8,7 @@ tags:         [driver, windows 7, windows xp]
 comments:     true
 share:        true
 modified:     2014-10-05
-permalink:    /come-identificare-ed-installare-un-driver-sconosciuto
+jekyll_permalink:    /come-identificare-ed-installare-un-driver-sconosciuto
 image:
   feature:    cpu.jpg
   preview:    cpu-thumb.jpg

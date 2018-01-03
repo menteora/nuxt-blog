@@ -8,7 +8,7 @@ tags:         [ruby, rails 4, agile, web, programmazione]
 comments:     true
 share:        true
 modified:     2014-06-30
-permalink:    /introduzione-a-ruby-on-rails-4-parte-1
+jekyll_permalink:    /introduzione-a-ruby-on-rails-4-parte-1
 image:
   feature:    ilmiotessoro.jpg
   preview:    ilmiotessoro-thumb.jpg

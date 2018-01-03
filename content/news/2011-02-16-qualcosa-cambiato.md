@@ -10,6 +10,6 @@ share:        	true
 image:			
   preview:      menteora.png
 created:      	1297847014
-permalink:		blog/qualcosa-è-cambiato
+jekyll_permalink:		blog/qualcosa-è-cambiato
 ---
 <p>&nbsp;</p> <h2>Due menti dinamiche si sono scontrate  preparatevi...  il secondo Big-Bang sta per iniziare!</h2><p>&nbsp;</p>

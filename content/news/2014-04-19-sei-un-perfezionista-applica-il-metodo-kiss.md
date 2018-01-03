@@ -13,7 +13,7 @@ image:
   preview:    childrens_wooden_abacus-thumb.jpg
   credit:     Viktor Hanacek
   creditlink: http://picjumbo.com/childrens-wooden-abacus/
-permalink:    /crescita%20personale/sei-un-perfezionista-applica-il-metodo-kiss/
+jekyll_permalink:    /crescita%20personale/sei-un-perfezionista-applica-il-metodo-kiss/
 ---
 
 Tutti abbiamo delle inclinazioni più o meno auto-lesioniste, una di queste è il **perfezionismo**.

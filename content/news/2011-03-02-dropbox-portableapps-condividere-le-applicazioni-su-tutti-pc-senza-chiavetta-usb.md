@@ -10,7 +10,7 @@ share:        	true
 image:			
   preview:      menteora.png
 created:      	1299075981
-permalink:		/blog/dropbox-portableapps-condividere-le-applicazioni-su-tutti-pc-senza-chiavetta-usb
+jekyll_permalink:		/blog/dropbox-portableapps-condividere-le-applicazioni-su-tutti-pc-senza-chiavetta-usb
 ---
 <p>
 	<strong>Vi &egrave; mai capitato di formattare il vostro pc Windows?</strong></p>

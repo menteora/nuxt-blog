@@ -8,7 +8,7 @@ tags:         [cms, web, drupal, multilingual]
 comments:     true
 share:        true
 modified:     2015-08-03
-permalink:    /le-novita-di-drupal8-part3
+jekyll_permalink:    /le-novita-di-drupal8-part3
 image:
   feature:    drupal-8-potato.jpg
   preview:    drupal-8-potato-thumb.jpg

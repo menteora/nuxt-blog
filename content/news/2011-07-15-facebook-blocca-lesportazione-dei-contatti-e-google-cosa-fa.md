@@ -10,7 +10,7 @@ share:			true
 image:			
   preview:      menteora.png
 created:		1310750659
-permalink:		/blog/facebook-blocca-lesportazione-dei-contatti-e-google-cosa-fa
+jekyll_permalink:		/blog/facebook-blocca-lesportazione-dei-contatti-e-google-cosa-fa
 ---
 
 <p>

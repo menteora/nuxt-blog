@@ -8,7 +8,7 @@ tags:         [cms, web, drupal, coding]
 comments:     true
 share:        true
 modified:     2015-08-03
-permalink:    /le-novita-di-drupal8-part6
+jekyll_permalink:    /le-novita-di-drupal8-part6
 image:
   feature:    drupal8-p6.jpg
   preview:    drupal8-p6-thumb.jpg

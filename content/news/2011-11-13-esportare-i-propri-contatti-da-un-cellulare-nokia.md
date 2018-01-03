@@ -10,7 +10,7 @@ share:			true
 image:			
   preview:      menteora.png
 created:		1321192250
-permalink:		/blog/esportare-i-propri-contatti-da-un-cellulare-nokia
+jekyll_permalink:		/blog/esportare-i-propri-contatti-da-un-cellulare-nokia
 ---
 
 <p class="rtejustify">

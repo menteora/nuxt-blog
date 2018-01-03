@@ -10,7 +10,7 @@ share:			true
 image:			
   preview:      DarthDrupal.jpg
 created:		1315390654
-permalink:		/blog/il-drupalcamp-2011-approda-verona
+jekyll_permalink:		/blog/il-drupalcamp-2011-approda-verona
 ---
 <p>
 	Tra due settimane approder&agrave; a Verona l&#39;evento drupal italiano per eccellenza: il Drupalcamp!</p>

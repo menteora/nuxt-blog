@@ -10,7 +10,7 @@ share:			true
 image:			
   preview:      DarthDrupal.jpg
 created:		1312454518
-permalink:		/blog/come-montare-limmagine-di-un-disco-sul-device-di-loopback-di-linux
+jekyll_permalink:		/blog/come-montare-limmagine-di-un-disco-sul-device-di-loopback-di-linux
 ---
 <p>In questo articolo spiegheremo come utilizzare il device di loopback dei sistemi operativi linux per montare l'immagine di un disco fisso (o di una pendrive o di un sd o di qualsiasi altro tipo di storage).</p><p><!--break--></p>
 <h2>

@@ -37,7 +37,7 @@ A differenza dei classici meta linguaggi Markdown risulta più **leggibile** e p
 
 Come dare un senso logico a tutto questo ammasso di file plain text? Facile, con Jekyll!
 
-[Jekyll](http://jekyllrb.com/) è un software sviluppato in ruby che permette di generare **siti statici** utilizzando dei template e dei file markdown. E' una soluzione molto completa in quanto contiene già a default tutto quello che occorre per la **gestione di un blog** (tag, categorie, permalink).
+[Jekyll](http://jekyllrb.com/) è un software sviluppato in ruby che permette di generare **siti statici** utilizzando dei template e dei file markdown. E' una soluzione molto completa in quanto contiene già a default tutto quello che occorre per la **gestione di un blog** (tag, categorie, jekyll_permalink).
 
 Installarlo è semplicissimo, bastano [Ruby](http://www.ruby-lang.org/en/downloads/), [RubyGems](http://rubygems.org/pages/download) e il comando:
 

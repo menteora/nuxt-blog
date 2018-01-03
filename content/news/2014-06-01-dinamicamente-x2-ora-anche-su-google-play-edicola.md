@@ -8,7 +8,7 @@ tags:         [google play edicola, newsstand, annunci]
 comments:     true
 share:        true
 modified:     2014-06-01
-permalink:    /dinamicamente-x2-ora-anche-su-google-play-edicola
+jekyll_permalink:    /dinamicamente-x2-ora-anche-su-google-play-edicola
 image:
   feature:    old_newspaper.jpg
   preview:    old_newspaper-thumb.jpg

@@ -10,7 +10,7 @@ share:        	true
 image:			
   preview:      menteora.png
 created:      	1302080696
-permalink:		/blog/eclipse-come-usare-gli-spazi-al-posto-dei-tabs
+jekyll_permalink:		/blog/eclipse-come-usare-gli-spazi-al-posto-dei-tabs
 ---
 <p>
 	Se siete dei puristi della programmazione PHP non potrete che modificare questa opzione nella configurazione del vostro Eclipse.</p>

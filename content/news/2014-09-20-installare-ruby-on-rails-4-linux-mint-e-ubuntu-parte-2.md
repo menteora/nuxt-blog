@@ -8,7 +8,7 @@ tags:         [ruby, rails 4, agile, web, programmazione, installazione, ubuntu,
 comments:     true
 share:        true
 modified:     2014-09-20
-permalink:    /installare-ruby-on-rails-4-linux-mint-e-ubuntu-parte-2
+jekyll_permalink:    /installare-ruby-on-rails-4-linux-mint-e-ubuntu-parte-2
 image:
   feature:    railroad-rails.jpg
   preview:    railroad-rails-thumb.jpg

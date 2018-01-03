@@ -8,7 +8,7 @@ tags:         [javascript, codecombat, programmare, gioco di ruolo, web]
 comments:     true
 share:        true
 modified:     2014-06-15
-permalink:    /come-diventare-un-mago-di-javascript-con-codecombat
+jekyll_permalink:    /come-diventare-un-mago-di-javascript-con-codecombat
 image:
   feature:    codecombat-wallpaper.png
   preview:    codecombat-wallpaper-thumb.png

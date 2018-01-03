@@ -8,7 +8,7 @@ tags:         [cms, web, drupal, frontend]
 comments:     true
 share:        true
 modified:     2015-08-03
-permalink:    /le-novita-di-drupal8-part4
+jekyll_permalink:    /le-novita-di-drupal8-part4
 image:
   feature:    drupal8-p4.jpg
   preview:    drupal8-p4-thumb.jpg

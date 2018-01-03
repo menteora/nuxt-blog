@@ -10,7 +10,7 @@ share:			true
 image:			
   preview:      menteora.png
 created:		1314693344
-permalink:		/blog/installare-uneditor-wysiwyg-su-drupal-ckeditor
+jekyll_permalink:		/blog/installare-uneditor-wysiwyg-su-drupal-ckeditor
 ---
 <p>
 	Uno dei problemi classici che si trovano ad affrontare prima o poi quasi tutti i manutentori dei siti Drupal &egrave; l&#39;installazione del WYSIWYG.</p>

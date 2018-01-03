@@ -48,7 +48,7 @@ Jekyll import estrarrà gli articoli presenti nel database e li inserirà nella 
 YYYY-MM-DD-title-of-the-post.md
 ```
 
-Per quanto riguarda gli URL dei post pre migrazione è possibile mantenerli uguali impostando correttamente il parametro **permalink** all'interno del file **_config.yml**.
+Per quanto riguarda gli URL dei post pre migrazione è possibile mantenerli uguali impostando correttamente il parametro **jekyll_permalink** all'interno del file **_config.yml**.
 
 La [documentazione ufficiale](http://import.jekyllrb.com/docs/home/) è un punto di riferimento essenziale per approfondire i meccanismi di migrazione e, perchè no, contribuire a migliorarli.
 

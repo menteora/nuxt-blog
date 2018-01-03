@@ -10,7 +10,7 @@ share:        	true
 image:			
   preview:      DarthDrupal.jpg
 created:      	1304333402
-permalink:		/blog/drupal-e-multilingua-come-rendere-poliglotta-il-vostro-sito
+jekyll_permalink:		/blog/drupal-e-multilingua-come-rendere-poliglotta-il-vostro-sito
 ---
 <p>
 	Uno dei problemi che spesso si presentano a chi sviluppa un sito multilingua con Drupal &egrave; quello di trovare il giusto tuning tra i vari moduli che occorrono allo scopo.</p>
