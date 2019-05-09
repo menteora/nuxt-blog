@@ -21,7 +21,7 @@
     "prismjs": "^1.8.4",
     "underscore": "^1.8.3",
     "vue-cookie-law": "^1.4.0",
-    "vue-moment": "^3.1.0",
+    "vue-moment": "^4.0.0",
     "vue-no-ssr": "^1.1.1",
     "vue-social-sharing": "^2.2.10",
     "vuetify": "^1.5.14",
