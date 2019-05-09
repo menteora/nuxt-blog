@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nuxt --hostname 0.0.0.0",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "nuxt start --hostname 0.0.0.0",
     "generate": "nuxt generate",
     "generate:dev": "nuxt generate && http-server dist",
     "deploy": "node deploy"
@@ -15,7 +15,7 @@
     "@nuxtjs/axios": "^4.4.0",
     "@nuxtjs/google-analytics": "^1.0.0",
     "config": "^1.27.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.4.0",
     "nuxtent": "^1.1.0",
     "prismjs": "^1.8.4",
     "underscore": "^1.8.3",
