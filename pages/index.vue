@@ -7,8 +7,8 @@
     <div v-for="post in posts" :key="post.title">
 
       <v-card class="my-3" hover v-on:click.capture="go(post.path)">
-        <v-card-media class="white--text" height="250px" :src="'/images/'+post.image.feature" v-if="post.image.feature">
-        </v-card-media>
+        <v-img class="white--text" height="250px" :src="'/images/'+post.image.feature" v-if="post.image.feature">
+        </v-img>
         <v-card-title primary-title>
           <h3 class="headline mb-0">{{ post.title }}</h3>
         </v-card-title>

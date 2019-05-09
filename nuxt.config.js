@@ -1,6 +1,8 @@
+import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
 var appConfig = require('config').get('app')
 
 export default {
+  mode: 'spa',
   /*
   ** Headers of the page
   for favicon: https://realfavicongenerator.net/
@@ -15,22 +17,27 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico?v=2' },
-      { rel: 'apple-touch-icon', sizes:'180x180', href:'/apple-touch-icon.png' },
-      { rel: 'icon', type: 'image/png', sizes:'32x32', href: '/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/png', sizes:'16x16', href: '/favicon-16x16.png' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'manifest', href: '/manifest.json' },
-      { rel: 'mask-icon', color:"#000000", href: '/safari-pinned-tab.svg' },
+      { rel: 'mask-icon', color: "#000000", href: '/safari-pinned-tab.svg' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' },
       { rel: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' }
     ]
   },
   plugins: [
-    '~/plugins/vuetify.js', 
     '~/plugins/vue-social-sharing.js',
     '~/plugins/vue-moment.js'
   ],
+
+  /*
+   ** Global CSS
+   */
   css: ['~/assets/style/app.styl', 'prismjs/themes/prism-coy.css'],
   modules: [
+    '@nuxtjs/pwa',
+    '@nuxtjs/vuetify',
     'nuxtent',
     ['@nuxtjs/google-analytics', { ua: appConfig.get('GoogleAnalyticsId') }]
   ],
@@ -42,20 +49,25 @@ export default {
   ** Build configuration
   */
   build: {
-    vendor: ['vuetify'],
-    extractCSS: true,
+    transpile: ['vuetify/lib'],
+    plugins: [new VuetifyLoaderPlugin()],
+    loaders: {
+      stylus: {
+        import: ['~assets/style/variables.styl']
+      }
+    },
     /*
     ** Run ESLINT on save
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
       if (ctx.dev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/,
-          options : {
-            fix : true
+          options: {
+            fix: true
           }
         })
       }

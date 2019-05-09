@@ -8,12 +8,13 @@
     "build": "nuxt build",
     "start": "nuxt start --hostname 0.0.0.0",
     "generate": "nuxt generate",
-    "generate:dev": "nuxt generate && http-server dist",
     "deploy": "node deploy"
   },
   "dependencies": {
     "@nuxtjs/axios": "^4.4.0",
     "@nuxtjs/google-analytics": "^1.0.0",
+    "@nuxtjs/pwa": "^2.6.0",
+    "@nuxtjs/vuetify": "^0.5.5",
     "config": "^1.27.0",
     "nuxt": "^2.6.3",
     "nuxtent": "^1.1.0",
@@ -23,7 +24,8 @@
     "vue-moment": "^3.1.0",
     "vue-no-ssr": "^1.1.1",
     "vue-social-sharing": "^2.2.10",
-    "vuetify": "^0.16.9"
+    "vuetify": "^1.5.14",
+    "vuetify-loader": "^1.2.2"
   },
   "devDependencies": {
     "nodemon": "^1.18.9",
