@@ -10,6 +10,9 @@
     host: 'ftp.',
     port: 21,
     localRoot: '/dist',
-    remoteRoot: '/public_html/nuxt/'
+    remoteRoot: '/public_html/nuxt/',
+    include: ['*'],
+    deleteRemote: true,
+    forcePasv: true
   }
 }
