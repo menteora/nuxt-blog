@@ -1,6 +1,6 @@
 var appConfig = require('config').get('app')
 
-module.exports = {
+export default {
   /*
   ** Headers of the page
   for favicon: https://realfavicongenerator.net/
