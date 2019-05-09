@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^4.4.0",
-    "@nuxtjs/google-analytics": "^1.0.0",
+    "@nuxtjs/google-analytics": "^2.2.0",
     "@nuxtjs/pwa": "^2.6.0",
     "@nuxtjs/vuetify": "^0.5.5",
     "config": "^1.27.0",
