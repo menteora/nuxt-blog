@@ -15,7 +15,7 @@
     "@nuxtjs/axios": "^4.4.0",
     "@nuxtjs/google-analytics": "^1.0.0",
     "config": "^1.27.0",
-    "nuxt": "^2.4.0",
+    "nuxt": "^2.6.3",
     "nuxtent": "^1.1.0",
     "prismjs": "^1.8.4",
     "underscore": "^1.8.3",
