@@ -2,12 +2,11 @@
   <v-layout column justify-center align-center>
 
     <nuxt-page-logo />
-
     <v-container fluid grid-list-md>
       <v-layout column justify-center align-center>
         <v-flex xs12 sm6 md8>
           <h1 class="display-1">{{ page.title }}</h1>
-          <nuxtent-body :body="page.body" />
+           <div v-html="page.$html" />
         </v-flex>
       </v-layout>
     </v-container>
@@ -17,18 +16,19 @@
 
 <script>
 import NuxtPageLogo from '~/components/PageLogo.vue'
+import pages from 'static/api/pages.json'
 
 export default {
   components: {
     NuxtPageLogo
   },
-  asyncData: async ({
-    app,
-    route,
-    payload
-  }) => ({
-    page: await app.$content('/pages').get(route.path) || payload
-  })
+  computed: {
+    page() {
+      return pages.find(
+        page => page.$slug === this.$route.params.page
+      )
+    }
+  },
 }
 </script>
 

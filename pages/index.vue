@@ -6,7 +6,7 @@
   <v-flex xs12 md5>
     <div v-for="post in posts" :key="post.title">
 
-      <v-card class="my-3" hover v-on:click.capture="go(post.path)">
+      <v-card class="my-3" hover v-on:click.capture="go(post.$slug)">
         <v-img class="white--text" height="250px" :src="'/images/'+post.image.feature" v-if="post.image.feature">
         </v-img>
         <v-card-title primary-title>
@@ -25,19 +25,20 @@
 
 <script>
 import NuxtPageLogo from '~/components/PageLogo.vue'
+import news from 'static/api/news.json'
 
 export default {
   components: {
     NuxtPageLogo
   },
-  asyncData: async ({
-    app
-  }) => ({
-    posts: await app.$content('/news').query({ exclude: 'body' }).getAll()
-  }),
+  computed: {
+    posts() {
+      return news
+    }
+  },
   methods: {
     go: function (url) {
-      this.$nuxt.$router.push(url)
+      this.$nuxt.$router.push(`/news/${url}`)
     }
   }
 }

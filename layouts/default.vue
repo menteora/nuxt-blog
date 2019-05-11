@@ -69,7 +69,7 @@
         {
           title: 'Licenza',
           icon: 'copyright',
-          to: '/license'
+          to: '/license/'
         },
         {
           title: 'Policy',

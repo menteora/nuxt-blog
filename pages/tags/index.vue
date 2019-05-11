@@ -14,7 +14,7 @@
             v-if="post.tags.indexOf(tag) > -1"
             :key="post.title"
           >
-            <v-card class="my-3" hover v-on:click.capture="go(post.path)">
+            <v-card class="my-3" hover v-on:click.capture="go(post.$slug)">
               <v-img
                 class="white--text"
                 height="150px"
@@ -32,22 +32,22 @@
 
 <script>
 import NuxtPageLogo from "~/components/PageLogo.vue";
+import news from "static/api/news.json";
 var _ = require("underscore");
 
 export default {
   components: {
     NuxtPageLogo
   },
-  asyncData: async ({ app, route }) => ({
-    posts: await app
-      .$content("/news")
-      .query({ exclude: "body" })
-      .getAll()
-  }),
   data: function() {
     return {
       tags: []
     };
+  },
+  computed: {
+    posts() {
+      return news;
+    }
   },
   created: function() {
     var t = [];
@@ -60,7 +60,7 @@ export default {
   },
   methods: {
     go: function(url) {
-      this.$nuxt.$router.push(url);
+      this.$nuxt.$router.push(`/news/${url}`);
     }
   },
   filters: {}

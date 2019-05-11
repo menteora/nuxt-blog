@@ -38,9 +38,15 @@ export default {
   modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/vuetify',
-    'nuxtent',
+    'nuxt-gustave',
     ['@nuxtjs/google-analytics', { ua: appConfig.get('GoogleAnalyticsId') }]
   ],
+  gustave: {
+    compilers: [
+      'compilers/news.js',
+      'compilers/pages.js'
+    ]
+  },
   /*
   ** Customize the progress-bar color
   */

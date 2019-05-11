@@ -13,3 +13,6 @@ dist
 # Config File
 config/*
 !config/default.*
+
+# nuxt-gustave
+static/api
