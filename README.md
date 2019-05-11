@@ -1,5 +1,8 @@
 > Dinamicamente.org migration form Jekyll
 
+## News! 
+- 11/05/2019 *Updated to **nuxt 2.6.3** and **vuetify 1.5.14***
+
 ## Desktop preview
 
 ![dinamicamente](static/images/dinamicamente-front.png)
