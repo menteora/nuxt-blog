@@ -12,7 +12,7 @@
 ![dinamicamente](static/images/dinamicamente-front-mobile.png)
 
 # Features
-- [x] Markdown content for pages and posts with [Nuxt-Gustave](https://github.com/yann-yinn/nuxt-gustave)
+- [x] Markdown content for pages and posts with [Nuxt-Gustave](https://github.com/yann-yinn/nuxt-gustave) 
 - [x] Highlight code inside posts with [Prismjs](http://prismjs.com/) ***(need fo fix!)***
 - [x] Post shareable with social with [Vue Social Sharing](https://github.com/nicolasbeauvais/vue-social-sharing)
 - [x] Cookie Law Compliant with [Vue Cookie Law](https://github.com/apertureless/vue-cookie-law)
@@ -48,5 +48,6 @@ $ npm run generate
 # generate static project and test locally with http-server module
 $ npm run generate:dev
 ```
+**NOTE:** [Nuxtent](https://github.com/nuxt-community/nuxtent-module) was dismissed due [incompatibility](https://github.com/nuxt-community/nuxtent-module/issues/190) with new releases of Nuxt
 
 For detailed explanation on how things work, check out the [Nuxt.js](https://github.com/nuxt/nuxt.js) and [Vuetify.js](https://vuetifyjs.com/) documentation.
