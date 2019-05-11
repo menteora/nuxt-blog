@@ -9,8 +9,8 @@
 ![dinamicamente](static/images/dinamicamente-front-mobile.png)
 
 # Features
-- [x] Markdown content for pages and posts with [Nuxtent](https://github.com/nuxt-community/nuxtent-module)
-- [x] Highlight code inside posts with [Prismjs](http://prismjs.com/)
+- [x] Markdown content for pages and posts with [Nuxt-Gustave](https://github.com/yann-yinn/nuxt-gustave)
+- [x] Highlight code inside posts with [Prismjs](http://prismjs.com/) ***(need fo fix!)***
 - [x] Post shareable with social with [Vue Social Sharing](https://github.com/nicolasbeauvais/vue-social-sharing)
 - [x] Cookie Law Compliant with [Vue Cookie Law](https://github.com/apertureless/vue-cookie-law)
 - [x] Facebook Comments with [standard sdk](https://developers.facebook.com/docs/plugins/comments/)
