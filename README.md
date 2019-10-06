@@ -1,6 +1,8 @@
 > Dinamicamente.org migration form Jekyll
 
 ## News! 
+# 06/10/2019 Now we have migrate our blog to Gridsome, see in action our multilanguage site: www.dinamicamente.org and github page: https://github.com/menteora/gridsome-blog
+
 - 11/05/2019 *Updated to **nuxt 2.6.3** and **vuetify 1.5.14***
 
 ## Desktop preview
