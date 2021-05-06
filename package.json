@@ -22,7 +22,7 @@
     "nuxt": "^2.6.3",
     "nuxt-gustave": "^0.5.3",
     "prismjs": "^1.8.4",
-    "underscore": "^1.8.3",
+    "underscore": "^1.12.1",
     "vue-cookie-law": "^1.4.0",
     "vue-moment": "^4.0.0",
     "vue-no-ssr": "^1.1.1",
